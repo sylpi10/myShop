@@ -15,7 +15,7 @@ class Category(models.Model):
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
-    def _str_(self):
+    def __str__(self):
         return self.name
 
     def get_absolute_url(self):
@@ -39,7 +39,7 @@ class Product(models.Model):
         ordering = ('name',)
         index_together = (('id', 'slug'),)
 
-    def _str_(self):
+    def __str__(self):
         return self.name
 
     def get_absolute_url(self):

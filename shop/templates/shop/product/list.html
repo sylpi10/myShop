@@ -170,15 +170,15 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active" {% if not category %}class="selected"{% endif %}>
               <a class="nav-link" href="{% url 'shop:product_list' %}">All
-                <span class="sr-only">(current)</span>
+                <span class="sr-only">(current) </span>
               </a>
             </li>
               {% for c in categories %}
-            <li {% if category.slug == c.slug %} class="nav-item">
-                {% endif %}
-              <a class="nav-link" href="{{ c.get_absolute_url }}">{{ category.name }}</a>
+            <li {% if category.slug == c.slug %}class="selected active" class="nav-item"
+                {% endif %}>
+              <a class="nav-link" href='{{ c.get_absolute_url }}'>{{ c.name }} </a>
             </li>
-              {% endfor%}
+              {% endfor %}
 
           </ul>
           <!-- Links -->

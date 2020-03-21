@@ -41,10 +41,11 @@ class Migration(migrations.Migration):
             ],
             options={
                 'ordering': ('name',),
+                'index_together': {('id', 'slug')},
             },
         ),
-        migrations.AlterIndexTogether(
-            name='product',
-            index_together={('id', 'slug')},
-        ),
+        # migrations.AlterIndexTogether(
+        #     name='product',
+        #     index_together={('id', 'slug')},
+        # ),
     ]
