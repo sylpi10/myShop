@@ -1,0 +1,12 @@
+.order-info{
+    background-color: #eee;
+    margin-top:120px;
+}
+.order-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eee;
+    padding:40px;
+
+}
