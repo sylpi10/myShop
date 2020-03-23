@@ -12,17 +12,6 @@ h1{
 }
 .carousel-item{
 }
-.order-info{
-    background-color: #eee;
-    margin-top:120px;
-}
-.order-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #eee;
-    padding:40px;
-}
 
 /* home body */
 main{
@@ -94,7 +83,7 @@ th:nth-child(even){
 }
 
 table>thead>tr>th:first-child{
-width:350px;
+    width:350px;
 }
 
 table>tbody{
@@ -106,19 +95,46 @@ table>tbody>tr{
     background-color: #E6E6FA;
     text-align:center;
     border-bottom: solid 1px #ccc;
-    width:100%;
 }
-table>tbody>tr>td{
-}
+
 table>tbody>tr>td:nth-child(even){
      background-color: #E4E2Ff;
 }
 
+/* responsive for table*/
+@media screen and (max-width: 940px) {
+    .detail-wrapper{
+        width: 60%;
+    }
+        table>thead{
+        display: none;
+    }
+    table>tbody>tr{
+         display:flex;
+        width:100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items:center;
+    }
+    table>tbody>tr>td{
+        margin:10px auto 24px auto;
+    }
+
+    table>tfoot>tr>td:not(:last-child){
+        display:none;
+    }
+
+    table>tfoot>tr>td:last-child{
+        border: solid;
+        text-align:center;
+    }
+
+}
+
 /* table foot*/
-table>tfoot{
-    background-color: #333;
-    padding: 16px;
-    color: #fff;
+
+table>tfoot>tr{
+    width:100%;
 }
 table>tfoot>tr>td{
     background-color: #333;
@@ -142,7 +158,11 @@ table>tfoot>tr>td{
     background-color: #ccc;
 }
 .text-right>a:last-child{
-    background-color: lightgreen;
+    background-color: #00b200;
+    color:#fff;
+}
+.text-right>a:hover{
+    opacity: .84;
 }
 
 /*footer*/
@@ -166,4 +186,53 @@ footer{
     font-size: 1.4rem;
 }
 .footer-copyright{
+}
+
+/* create command */
+.order-info{
+    background-color: #e4eeee;
+    margin-top:120px;
+    padding: 20px;
+    border-bottom: solid 1px #ccc;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#total{
+    border: solid 1px #333;
+    padding: 6px 14px;
+}
+.order-info>h1{
+    color: #333;
+}
+.order-form-wrapper{
+    background-color: #e4eeee;
+
+}
+.order-form{
+    padding:40px;
+    width: 60%;
+    margin:auto;
+
+}
+.order-form>p>label{
+    width:90px;
+}
+.order-form>p>input{
+    width: 300px;
+    height:36px;
+    border-radius: 4px;
+}
+
+.validate-order{
+    width: 200px;
+    margin-left: 90px;
+    background-color: #00b200;
+    border: none;
+    padding: 8px;
+    color: #fff;
+}
+.validate-order:hover{
+    opacity: .84;
 }
