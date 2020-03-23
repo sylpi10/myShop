@@ -2,9 +2,17 @@ body{
 
 }
 
+/* top nav-bar */
 nav{
- background-color: #E6E6FA;
+ background-color: #e4eeee;
  font-size: 1.1rem;
+ color: #333 !important;
+}
+nav>.container>.collapse>ul>li>a{
+    color: #333;
+}
+.nav-item>a>i{
+    margin-top:10px;
 }
 h1{
     color: #D8BFD8;
@@ -32,7 +40,6 @@ main>.main-wrapper{
     padding-top: 10px;
 }
 .products-list-wrapper>span{
-    color: #333 !important;
 
 }
 .products-list>ul>li>a{
