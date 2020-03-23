@@ -1,8 +1,14 @@
 body{
 
 }
+
+nav{
+ background-color: #E6E6FA;
+ font-size: 1.1rem;
+}
 h1{
-color: #D8BFD8;
+    color: #D8BFD8;
+    font-family: 'Fredericka the Great', cursive;
 }
 .carousel-item{
 }
@@ -18,13 +24,22 @@ color: #D8BFD8;
     padding:40px;
 }
 
+/* home body */
 main{
     margin-top: -15px;
-    padding-top: 15px;
+    background: url('../../static/img/chenoaback.jpg') no-repeat;
+    background-size: cover;
 }
-.products-list-wrapper{
-    background-color: #D8BFD8;
-    color: #333;
+main>.main-wrapper{
+    background-color: rgba(255,255,255,.9);
+    padding-top:15px;
+    margin-top: -2px;
+}
+
+/* product list nav*/
+.products-list-wrapper, .pagination-wrapper{
+    color: #fff;
+    background-color: #333;
     padding-top: 10px;
 }
 .products-list-wrapper>span{
@@ -33,44 +48,122 @@ main{
 }
 .products-list>ul>li>a{
     text-transform: uppercase;
-    color: #333 !important;
     margin-top:4px;
 }
 .products-list>ul>li>a:hover{
-    background-color: #D8BFE5;
+    background-color: #444;
+}
+
+/* product detail*/
+.product-detail>.container>h1{
+    color: #333;
+}
+
+.add-to-cart{
+    background-color: #00b200;
+    color: #fff;
+    text-transform: uppercase;
+    width: 200px;
 }
 
 /* cart detail*/
+
 .detail-wrapper{
     width: 70%;
-    margin: 140px auto;
-    box-shadow: 2px 2px 4px #ddd, -2px -2px 4px #ddd;
+    margin: 140px auto 0 auto;
     padding: 20px;
+}
+.detail-wrapper>h1{
+    color: #333;
 }
 table{
     width: 100%;
+    font-size: 1.1rem;
 }
 table>thead{
-    background-color: #eee;
-    mt4
-}
-table>tbody>tr{
-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #ccc;
-    margin: 2px;
+     background-color: #E6E6FA;
 }
 
+table>thead>tr>th{
+    padding: 16px;
+    text-align:center;
+    border-bottom: solid 1px #ccc;
+}
+th:nth-child(even){
+   background-color: #E4E2Ff;
+}
+
+table>thead>tr>th:first-child{
+width:350px;
+}
+
+table>tbody{
+    padding 10px;
+}
+
+/* cells */
+table>tbody>tr{
+    background-color: #E6E6FA;
+    text-align:center;
+    border-bottom: solid 1px #ccc;
+    width:100%;
+}
+table>tbody>tr>td{
+}
+table>tbody>tr>td:nth-child(even){
+     background-color: #E4E2Ff;
+}
+
+/* table foot*/
+table>tfoot{
+    background-color: #333;
+    padding: 16px;
+    color: #fff;
+}
+table>tfoot>tr>td{
+    background-color: #333;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* links bottom*/
+
+.text-right{
+    margin-top: 20px;
+}
 .text-right>a{
-    padding: 2px 10px;
+    padding: 6px 10px;
     border-radius: 4px;
     margin: 6px;
+    color: #333;
 }
 .text-right>a:first-child{
     background-color: #ccc;
 }
 .text-right>a:last-child{
     background-color: lightgreen;
+}
+
+/*footer*/
+footer{
+     background: url('../../static/img/chenoa2.jpg') no-repeat center;
+     background-size: cover;
+     height: 400px;
+}
+.footer-wrapper{
+    height: 400px;
+     background-color: rgba(0,0,0,.7);
+      display: flex;
+     flex-direction:column;
+     justify-content: space-between;
+}
+.footer-wrapper>.about{
+    margin-top: 80px;
+    font-size: 1.1rem;
+}
+.footer-wrapper>.social-links{
+    font-size: 1.4rem;
+}
+.footer-copyright{
 }
