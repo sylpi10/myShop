@@ -31,24 +31,28 @@
 
             <div class="mb-3">
               <a href="">
-                <span class="badge purple mr-1 p-2">{{ product.category }}</span>
+                <span class="badge purple mr-1">{{ product.category }}</span>
               </a>
               <a href="">
-                <span class="badge blue mr-1 p-2">New</span>
+                <span class="badge blue mr-1">New</span>
               </a>
-
+              <a href="">
+                <span class="badge red mr-1">Bestseller</span>
+              </a>
             </div>
 
             <p class="lead">
-
+              <span class="mr-1">
+                <del>$200</del>
+              </span>
               <span>{{ product.price }} €</span>
             </p>
 
-            <p class="lead font-weight-bold">Description</p>
+            <p class="lead font-weight-bold">Description {{ product.id }}</p>
 
             <p>{{ product.description|linebreaks }}</p>
 
-            <form action="{% url 'cart:cart_add' product.id %}" method="post" class="d-flex justify-content-left">
+            <form action="{% url 'cart:cart_add' product.id %}" class="d-flex justify-content-left" method="post">
               <!-- Default input -->
                 {{ cart_product_form }}
                 {% csrf_token %}
