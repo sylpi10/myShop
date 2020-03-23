@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Category, Product
 
+admin.site.site_header = 'Momo admin space'
+
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
