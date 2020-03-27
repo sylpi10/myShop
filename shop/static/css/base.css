@@ -39,15 +39,20 @@ main>.main-wrapper{
     background-color: #333;
     padding-top: 10px;
 }
-.products-list-wrapper>span{
 
-}
 .products-list>ul>li>a{
     text-transform: uppercase;
     margin-top:4px;
 }
 .products-list>ul>li>a:hover{
     background-color: #444;
+}
+
+/* product list pagination */
+.pagination>li>a{
+    color: #fff !important;
+}.pagination>li>a:hover{
+    color: #333 !important;
 }
 
 /* product detail*/
