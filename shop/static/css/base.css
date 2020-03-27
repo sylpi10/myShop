@@ -51,7 +51,7 @@ main>.main-wrapper{
 /* product list pagination */
 .pagination>li>a{
     color: #fff !important;
-}.pagination>li>a:hover{
+}.pagination>li>a:hov{
     color: #333 !important;
 }
 
@@ -224,22 +224,24 @@ footer{
 }
 .order-form{
     padding:40px;
-    width: 60%;
+    width: 50%;
     margin:auto;
+    display:flex;
+    flex-direction: column;
 
 }
-.order-form>p>label{
-    width:90px;
+.order-form>label{
+    width:120px;
+    margin-top: 16px ;
 }
-.order-form>p>input{
-    width: 300px;
-    height:36px;
+.order-form>input{
+    height:42px;
     border-radius: 4px;
 }
 
 .validate-order{
     width: 200px;
-    margin-left: 90px;
+    margin:20px auto;
     background-color: #00b200;
     border: none;
     padding: 8px;
