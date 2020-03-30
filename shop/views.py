@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from cart.form import CartAddProductForm
@@ -11,7 +13,7 @@ def product_list(request, category_slug=None):
     productspag = Product.objects.filter(available=True)
 
     # pagination
-    paginator = Paginator(productspag, 4)
+    paginator = Paginator(productspag, 8)
     page = request.GET.get('page')
     productspag = paginator.get_page(page)
 
@@ -38,3 +40,7 @@ def product_detail(request, id, slug):
                   'shop/product/detail.html',
                   {'product': product, 'cart_product_form': cart_product_form})
 
+
+def about(request):
+    return render(request,
+                  'shop/about.html')

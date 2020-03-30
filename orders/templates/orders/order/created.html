@@ -6,9 +6,13 @@
 {% endblock %}
 
 {% block content %}
-<h1>Thank you</h1>
-
-<p>Your order has been completed, Num order is :</p>
-<strong>{{ order.id }}</strong>
-
+<div class="thanks-wrapper">
+    <div class="thanks">
+        <h1>Merci de votre achat</h1>
+        <p>Votre commande a bien été enregistrée, <br>
+            Vos produits vous seront envoyé dans les plus brefs délais. <br>
+            <span>Le numéro de votre commande est :   <strong>{{ order.id }}</strong></span>
+        </p>
+    </div>
+</div>
 {% endblock %}

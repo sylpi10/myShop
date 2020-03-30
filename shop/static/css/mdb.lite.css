@@ -1,4 +1,6 @@
+/*
 @charset "UTF-8";
+*/
 /*!
  * Material Design for Bootstrap 4
  * Version: MDB Lite 4.8.11
@@ -24,7 +26,8 @@
  *
  * Attribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js
  *
- */
+ *//*
+
 .mdb-color.lighten-5 {
   background-color: #d0d6e2 !important; }
 
@@ -1686,13 +1689,15 @@ a.text-light:hover, a.text-light:focus {
   background: url("../img/overlays/09.png");
   background-attachment: fixed; }
 
+*/
 /*!
  * Waves v0.7.6
  * http://fian.my.id/Waves
  *
  * Copyright 2014-2018 Alfiana E. Sibuea and other contributors
  * Released under the MIT license
- * https://github.com/fians/Waves/blob/master/LICENSE */
+ * https://github.com/fians/Waves/blob/master/LICENSE *//*
+
 .waves-effect {
   position: relative;
   overflow: hidden;
@@ -1790,13 +1795,15 @@ a.text-light:hover, a.text-light:focus {
 a.waves-effect, a.waves-light {
   display: inline-block; }
 
+*/
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.7.0
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2018 Daniel Eden
- */
+ *//*
+
 .animated {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -4245,7 +4252,8 @@ body.scrollable {
       .modal-dialog.cascading-modal .modal-header .social-buttons a {
         font-size: 1rem; }
   .modal-dialog.cascading-modal .modal-c-tabs {
-    /*
+    */
+/*
       .md-tabs {
        border-radius: $md-card-border-radius;
        .nav-item {
@@ -4256,7 +4264,8 @@ body.scrollable {
          }
        }
       }
-      */ }
+      *//*
+ }
     .modal-dialog.cascading-modal .modal-c-tabs .md-tabs {
       display: flex;
       margin: -1.5rem 1rem 0 1rem;
@@ -5679,6 +5688,7 @@ table.table-sm td {
 .table-responsive-xl > .table-bordered {
   border-top: 1px solid #dee2e6; }
 
+*/
 /*
 .navbar {
   &.fixed-top,
@@ -5693,7 +5703,8 @@ table.table-sm td {
     }
   }
 }
-*/
+*//*
+
 ul.stepper {
   padding: 0 1.5rem;
   padding: 1.5rem;
@@ -5972,3 +5983,4 @@ ul.stepper {
       color: #ffac47;
       transition: all .2s linear;
       transform: rotate(180deg); }
+*/
