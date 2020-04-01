@@ -36,9 +36,9 @@
               <a href="">
                 <span class="badge purple p-2 mr-1">{{ product.category }}</span>
               </a>
-              <a href="">
-                <span class="badge blue p-2 mr-1">New</span>
-              </a>
+<!--              <a href="">-->
+<!--                <span class="badge blue p-2 mr-1">New</span>-->
+<!--              </a>-->
 
             </div>
 
@@ -55,7 +55,9 @@
               <!-- Default input -->
                 {{ cart_product_form }}
                 {% csrf_token %}
-              <input type="submit" value="Ajouter au panier" aria-label="Search" class="form-control add-to-cart">
+              <button type="submit" aria-label="Add" class="form-control add-to-cart">
+                <i class="fa fa-cart-plus" aria-hidden="true"></i> Ajouter au panier
+              </button>
 
             </form>
 

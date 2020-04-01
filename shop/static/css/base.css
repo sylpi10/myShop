@@ -52,6 +52,16 @@ main>.main-wrapper{
     background-color: #444;
 }
 
+/* PRODUCT LIST CARD*/
+
+.card{
+    transition: all .8s ease;
+}
+.card:hover{
+    box-shadow: 3px 3px 18px #bbb, -3px -3px 18px #bbb;
+    transform: scale(1.04);
+}
+
 /* product list pagination */
 .pagination>li>a{
     color: #fff !important;
@@ -179,6 +189,7 @@ table>tfoot>tr>td{
     border-radius: 4px;
     margin: 6px;
     color: #fff;
+    font-weight: 400;
 }
 .text-right>a:first-child{
     background-color: #1874CD;
@@ -210,7 +221,8 @@ footer{
 .footer-wrapper>.social-links{
     font-size: 1.4rem;
 }
-.footer-copyright{
+.footer-wrapper>.social-links>a:hover{
+    color: rgb(33, 150, 243);
 }
 
 /* create command */
@@ -265,15 +277,32 @@ footer{
     margin:auto;
 }
 
-.order-form>.validate-order{
-    width: 200px;
-    margin:20px auto;
-    background-color: #00b200;
+.order-form>.btns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+}
+.form-btn{
     border: none;
     padding: 8px;
     color: #fff;
+    margin-top: 10px;
+    width: 200px;
+    font-weight: 400;
 }
-.validate-order:hover{
+
+.order-form>.btns>.validate-order{
+    background-color: #00b200;
+}
+.order-form>.btns>.back{
+    background-color: #1874CD;
+}
+.order-form>.btns>.back>a{
+    color: #fff;
+}
+.form-btn:hover{
     opacity: .84;
 }
 
@@ -298,6 +327,13 @@ footer{
 .thanks>p>span{
     font-size: 1.2rem;
 }
+.check{
+    font-size: 4rem;
+    margin-top: 120px;
+    /*color: #00b200;*/
+}
+
+/* ABOUT */
 
 .about-wrapper{
     background-color:  #e4eeee;

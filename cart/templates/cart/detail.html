@@ -45,7 +45,8 @@
                     </form>
                 </td>
                 <td>
-                    <a href="{% url 'cart:cart_remove' product.id %}">Retirer du Panier</a>
+                    <a href="{% url 'cart:cart_remove' product.id %}"> <i class="fa fa-times" aria-hidden="true"></i>
+                    Retirer du Panier</a>
                 </td>
                 <td class="num">{{ item.price }} €</td>
                 <td class="num">{{ item.total_price }} €</td>
@@ -66,8 +67,10 @@
             </tfoot>
         </table>
         <p class="text-right">
-            <a href="{% url 'shop:product_list' %}" class="button light">  Continuer mes Achats </a>
-            <a href="{% url 'orders:order_create' %}">  Valider mon panier  </a>
+            <a href="{% url 'shop:product_list' %}" class="button light">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i> Continuer mes Achats </a>
+            <a href="{% url 'orders:order_create' %}">
+                <i class="fa fa-check" aria-hidden="true"></i> Valider mon panier  </a>
         </p>
     </div>
     </div>

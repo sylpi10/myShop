@@ -8,11 +8,13 @@
 {% block content %}
 <div class="thanks-wrapper">
     <div class="thanks">
-        <h1>Merci de votre achat</h1>
+        <h1>Merci de votre achat </h1>
         <p>Votre commande a bien été enregistrée, <br>
-            Vos produits vous seront envoyé dans les plus brefs délais. <br>
-            <span>Le numéro de votre commande est :   <strong>{{ order.id }}</strong></span>
+            Vos produits vous seront envoyés dans les plus brefs délais. <br><br>
+            <span>Le numéro de votre commande est :   <strong>{{ order.id }}</strong></span> <br>
+            <i class="fa fa-check-square check" aria-hidden="true"></i>
         </p>
     </div>
 </div>
 {% endblock %}
+

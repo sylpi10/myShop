@@ -25,7 +25,14 @@
 
                 <form action="." method="post" class="order-form">
                     {{ form }}
-                    <input type="submit" value="Valider ma Commande" class="validate-order">
+                    <div class="btns">
+                        <button type="" class="back form-btn">
+                            <a href="{% url 'cart:cart_detail' %}">
+                         <i class="fa fa-arrow-left" aria-hidden="true"></i> Mon panier </a> </button>
+                        <button type="submit" class="validate-order form-btn">
+                            <i class="fa fa-check" aria-hidden="true"></i> Valider ma commande
+                        </button>
+                    </div>
                     {% csrf_token %}
                 </form>
             </div>

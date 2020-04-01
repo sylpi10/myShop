@@ -190,7 +190,7 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="{% if product.image %}{{ product.image.url }}{% else %}
+                <img src="{% if product.image %}{{ product.smart.url }}{% else %}
                 {% static 'img/no_image.png' %}
                 {% endif %}" class="card-img-top"
                   alt="">
