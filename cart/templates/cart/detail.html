@@ -30,7 +30,7 @@
             <tr>
                 <th>
                     <a href="{{ product.get_absolute_url }}">
-                        <img src="{% if product.image %}{{ product.image.url }}
+                        <img src="{% if product.image %}{{ product.smart.url }}
                         {% else %}{% static 'img/no_image.png' %}{% endif %}" width="360" alt="Product image">
                     </a>
                 </th>
