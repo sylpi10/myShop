@@ -1,5 +1,6 @@
 {% extends "shop/base.html" %}
 {% load static %}
+{% load mathfilters %}
 
 {% block title %}
     checkout
@@ -29,12 +30,31 @@
                         <button type="" class="back form-btn">
                             <a href="{% url 'cart:cart_detail' %}">
                          <i class="fa fa-arrow-left" aria-hidden="true"></i> Mon panier </a> </button>
-                        <button type="submit" class="validate-order form-btn">
+                        <button type="submit" class="validate-order form-btn stripe-button">
                             <i class="fa fa-check" aria-hidden="true"></i> Valider ma commande
                         </button>
                     </div>
                     {% csrf_token %}
+
+                     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                             data-key="{{ key }}"
+                             data-description="Règlement par CB"
+                             data-amount="{{ cart.get_total_price|mul:100 }}"
+                             data-locale="auto"
+                             data-currency="EUR"
+                     >
+                     </script>
                 </form>
+
+
+<!--                 <style type="text/css">-->
+<!--                     input[type=date], input[type=datetime-locale], input[type=email], input[type=password],-->
+<!--                     textarea.materialize{-->
+<!--                     height: 2em !important;}-->
+<!--                 </style>-->
+                 <style type="text/css">
+                     .stripe-button-el {display:none};
+                 </style>
             </div>
         </div>
    </main>

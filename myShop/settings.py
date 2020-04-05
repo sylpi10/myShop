@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^3k6f=y88211scry)4e%!w=n7q#!n0_id34ihgt2-en$n-en$n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
-    'orders.apps.OrdersConfig'
+    'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
+    'mathfilters'
 ]
 
 MIDDLEWARE = [
@@ -85,6 +87,9 @@ DATABASES = {
     }
 }
 
+STRIPE_PUBLISHABLE_KEY = "pk_test_X7TovXiAS62JE9IjnKHy0Ka500nTSH8eAO"
+
+STRIPE_SECRET_KEY = "sk_test_9EwjLu4O0cS0ao41z33cGREK00P6wxf0cW"
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
