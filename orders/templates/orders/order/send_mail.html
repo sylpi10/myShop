@@ -1,0 +1,18 @@
+{% load static %}
+{% block title %}
+    mail
+{% endblock %}
+
+{% block content %}
+         <div class="">
+                <h1>Nouvelle commande </h1>
+                <ul>
+                    {% for item in cart %}
+                    <li>{{ item.quantity }} x {{ item.product.name }} :
+                        <span>{{ item.total_price }} €</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <p id="total">Total : {{ cart.get_total_price }} €</p>
+        </div>
+{% endblock %}

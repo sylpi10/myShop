@@ -1,5 +1,9 @@
+from django.core import mail
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 
 from cart.cart import Cart
 from orders.form import OrderCreateForm
@@ -40,7 +44,16 @@ def order_create(request):
 
             order.save()
 
+            subject = 'Nouvelle commande'
+            html_message = render_to_string('orders/order/send_mail.html', {'cart': cart, 'item': item})
+            plain_message = strip_tags(html_message)
+            from_email = 'syl.pillet@hotmail.fr'
+            to = 'syl.pillet@hotmail.fr'
+
+            mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
+
             return redirect('payment:done')
+
         else:
             return redirect('payment:canceled')
 

@@ -12,6 +12,7 @@ def product_list(request, category_slug=None):
     products = Product.objects.filter(available=True)
     productspag = Product.objects.filter(available=True)
 
+
     # pagination
     paginator = Paginator(productspag, 8)
     page = request.GET.get('page')
