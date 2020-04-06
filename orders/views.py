@@ -7,7 +7,7 @@ from django.utils.html import strip_tags
 
 from cart.cart import Cart
 from orders.form import OrderCreateForm
-from orders.models import OrderItem
+from orders.models import OrderItem, Order
 from django.conf import settings
 import stripe
 
@@ -24,6 +24,16 @@ def order_create(request):
             source=request.POST['stripeToken']
         )
         form = OrderCreateForm(request.POST)
+
+        # get values from order form to send values in email
+        first_name = form['first_name'].value()
+        last_name = form.data['last_name']
+        address = form.data['address']
+        postal_code = form.data['postal_code']
+        city = form.data['city']
+        email = form.data['email']
+        print(last_name, first_name, address)
+
         if form.is_valid():
             order = form.save(commit=False)
             order.save()
@@ -44,11 +54,22 @@ def order_create(request):
 
             order.save()
 
+            # send email to admin with order recap & client infos
             subject = 'Nouvelle commande'
-            html_message = render_to_string('orders/order/send_mail.html', {'cart': cart, 'item': item})
+            html_message = render_to_string('orders/order/send_mail.html',
+                                            {'cart': cart, 'item': item,
+                                             'form': form,
+                                             'first_name': first_name,
+                                             'last_name': last_name,
+                                             'address': address,
+                                             'postal_code': postal_code,
+                                             'city': city,
+                                             'email': email
+                                             })
             plain_message = strip_tags(html_message)
             from_email = 'syl.pillet@hotmail.fr'
-            to = 'syl.pillet@hotmail.fr'
+            # to = 'syl.pillet@hotmail.fr'
+            to = 'latelierchenoa@gmail.com', 'syl.pillet@hotmail.fr'
 
             mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
 
