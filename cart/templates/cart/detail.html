@@ -69,8 +69,14 @@
         <p class="text-right">
             <a href="{% url 'shop:product_list' %}" class="button light">
                 <i class="fa fa-shopping-basket" aria-hidden="true"></i> Continuer mes Achats </a>
+              {% if cart|length > 0 %}
             <a href="{% url 'orders:order_create' %}">
-                <i class="fa fa-check" aria-hidden="true"></i> Valider mon panier  </a>
+                  <i class="fa fa-check" aria-hidden="true"></i> Valider mon panier  </a>
+                 {% else %}
+                <a href="#" class="empty-cart">
+                    <i class="fa fa-times" aria-hidden="true"></i> Panier vide  </a>
+                 {% endif %}
+
         </p>
     </div>
     </div>

@@ -24,8 +24,9 @@ def order_create(request):
             source=request.POST['stripeToken']
         )
         form = OrderCreateForm(request.POST)
+        # for field in form:
+        #     print(field.name)
 
-        # get values from order form to send values in email
         first_name = form['first_name'].value()
         last_name = form.data['last_name']
         address = form.data['address']
@@ -54,7 +55,6 @@ def order_create(request):
 
             order.save()
 
-            # send email to admin with order recap & client infos
             subject = 'Nouvelle commande'
             html_message = render_to_string('orders/order/send_mail.html',
                                             {'cart': cart, 'item': item,
@@ -64,23 +64,26 @@ def order_create(request):
                                              'address': address,
                                              'postal_code': postal_code,
                                              'city': city,
-                                             'email': email
+                                             'email': email,
+                                             'order': order
                                              })
             plain_message = strip_tags(html_message)
             from_email = 'syl.pillet@hotmail.fr'
-            # to = 'syl.pillet@hotmail.fr'
-            to = 'latelierchenoa@gmail.com', 'syl.pillet@hotmail.fr'
+            to = 'syl.pillet@hotmail.fr'
+            # to = 'latelierchenoa@gmail.com'
 
             mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
 
-            return redirect('payment:done')
+        #     return redirect('orders:created')
+        #
+        # else:
+        #     return redirect('payment:canceled')
 
+            return render(request,
+                          'orders/order/created.html',
+                          {'order': order})
         else:
             return redirect('payment:canceled')
-
-            # return render(request,
-            #               'orders/order/created.html',
-            #               {'order': order})
     else:
         form = OrderCreateForm()
         key = settings.STRIPE_PUBLISHABLE_KEY

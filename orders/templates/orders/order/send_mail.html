@@ -2,24 +2,25 @@
 
 {% block content %}
          <div class="">
-                <h3>Nouvelle commande </h3>
-                <ul>
-                    {% for item in cart %}
-                    <li>{{ item.quantity }} x {{ item.product.name }} :
-                        <span>{{ item.total_price }} €</span>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <p id="total">Total : {{ cart.get_total_price }} €</p>
+            <h3>Nouvelle commande </h3>
+            <span>Numéro de commande :  <strong>{{ order.id }}</strong></span> <br>
+            <ul>
+                {% for item in cart %}
+                <li>{{ item.quantity }} x {{ item.product.name }} :
+                    <span>{{ item.total_price }} €</span>
+                </li>
+                {% endfor %}
+            </ul>
+            <p id="total">Total : {{ cart.get_total_price }} €</p>
         </div>
         <div class="">
-                    <h3>Client: </h3>
-                    <ul>
-                            <li>M, Mme: {{ first_name }} {{ last_name}}</li>
-                            <li>Adresse: {{ address }}</li>
-                            <li>{{ postal_code }}</li>
-                            <li>{{ city }}</li>
-                            <li>email: {{ email }}</li>
-                    </ul>
-                </div>
+                <h3>Client: </h3>
+                <ul>
+                    <li>M, Mme:<strong> {{ first_name }} {{ last_name}}</strong></li>
+                    <li>Adresse:<strong> {{ address }}</strong></li>
+                    <li>&nbsp;<strong> {{ postal_code }}</strong></li>
+                    <li>&nbsp;<strong> {{ city }}</strong></li>
+                    <li><strong>Email: {{ email }}</strong></li>
+                </ul>
+        </div>
 {% endblock %}

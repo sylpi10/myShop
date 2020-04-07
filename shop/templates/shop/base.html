@@ -63,7 +63,7 @@
               {% with total_items=cart|length %}
                 {% if cart|length > 0 %}
                 {{ total_items }}
-                {% else %} {% endif %}
+                {% else %} 0 {% endif %}
                 {% endwith %}
               </span>
               <i class="fas fa-shopping-cart"></i>
@@ -122,7 +122,9 @@
     <!--Copyright-->
     <div class="footer-copyright py-3">
       © 2020 Copyright:
-      <a href="https://sylvainpillet.com/" target="_new"> Sylver Pi </a>
+      <a href="https://sylvainpillet.com/" target="_new">  Syl Pi </a>
+      <a href="{% url 'shop:legals' %}" target="_new"> Mentions Légales </a>
+      <a href="{% url 'shop:cgv' %}" target="_new"> Condition générales</a>
     </div>
     <!--/.Copyright-->
   </div>

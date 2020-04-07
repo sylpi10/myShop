@@ -194,7 +194,7 @@ table>tfoot>tr>td{
     font-weight: bold;
 }
 
-/* links bottom*/
+/* links bottom  KEEP SHOPPING  VALIDATE CART*/
 
 .text-right{
     margin-top: 20px;
@@ -214,6 +214,12 @@ table>tfoot>tr>td{
 }
 .text-right>a:last-child{
     background-color: #00b200;
+}
+.text-right>.empty-cart{
+    opacity: .68;
+}
+.text-right>.empty-cart:hover{
+    opacity: .68;
 }
 .text-right>a:hover{
     opacity: .84;
@@ -238,6 +244,20 @@ footer{
     font-size: 1.4rem;
 }
 .footer-wrapper>.social-links>a:hover{
+    color: rgb(33, 150, 243);
+}
+.footer-copyright{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+     font-size: 0.9rem;
+}
+.footer-copyright>a{
+    width: 200px;
+    text-align:left;
+    padding:0 10px;
+}
+.footer-copyright>a:hover{
     color: rgb(33, 150, 243);
 }
 @media screen and (max-width: 520px) {
@@ -268,7 +288,6 @@ footer{
 }
 .order-form-wrapper{
     background-color: #e4eeee;
-
 }
 .order-form{
     padding:40px 28%;
@@ -359,9 +378,9 @@ footer{
 /* ABOUT */
 
 .about-wrapper{
-    background-color:  #e4eeee;
-       width: 74%;
-       margin: auto;
+   background-color:  #e4eeee;
+   width: 74%;
+   margin: auto;
 }
 .about{
     margin: 80px auto;
@@ -383,4 +402,11 @@ footer{
 .about>img{
     width: 100%;
     box-shadow: 2px 2px 14px #ccc, -2px -2px 14px #ccc;
+}
+
+.legals-wrapper{
+    padding:120px 30px 40px 30px;
+    width: 85%;
+    margin: auto;
+    background-color: #e4eeee;
 }

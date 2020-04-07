@@ -45,3 +45,13 @@ def product_detail(request, id, slug):
 def about(request):
     return render(request,
                   'shop/about.html')
+
+
+def legals(request):
+    return render(request,
+                  'shop/legals.html')
+
+
+def cgv(request):
+    return render(request,
+                  'shop/cgv.html')
