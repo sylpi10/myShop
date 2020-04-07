@@ -1,0 +1,6 @@
+myShop/settings.py
+db.sqlite3
+media/
+requirements.txt
+static/
+venv/
