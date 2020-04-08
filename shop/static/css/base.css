@@ -1,6 +1,15 @@
 body{
 
 }
+.message{
+     z-index:999;
+     top:120px;
+     right: 40px;
+     position:absolute;
+}
+.message>.toast{
+    border-radius:16px;
+}
 
 /* top nav-bar */
 nav{

@@ -1,5 +1,6 @@
 from datetime import date
 
+from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from cart.form import CartAddProductForm
@@ -11,7 +12,9 @@ def product_list(request, category_slug=None):
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
     productspag = Product.objects.filter(available=True)
-
+    # request.session.set_expiry(20)
+    if request.session.is_empty():
+        messages.success(request, 'Votre session a expirée')
 
     # pagination
     paginator = Paginator(productspag, 8)

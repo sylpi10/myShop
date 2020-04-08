@@ -24,8 +24,6 @@ def order_create(request):
             source=request.POST['stripeToken']
         )
         form = OrderCreateForm(request.POST)
-        # for field in form:
-        #     print(field.name)
 
         first_name = form['first_name'].value()
         last_name = form.data['last_name']
