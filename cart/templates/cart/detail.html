@@ -38,8 +38,17 @@
                 <td>{{ product.name }}</td>
                  <td>
                     <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                        {{ item.update_quantity_form.quantity }}
+<!--                        {{ item.update_quantity_form.quantity }}-->
+
+                          <select name="quantity" id="id_quantity">
+                             {% for i in quantity %}
+                               <option value="{{i}}"> {{i}} </option>
+                            {% endfor %}
+                        </select>
+
+<!--                        <input type="hidden" name="update" value="False" id="id_update">-->
                         {{ item.update_quantity_form.update }}
+
                         <input type="submit" value="Changer">
                         {% csrf_token %}
                     </form>

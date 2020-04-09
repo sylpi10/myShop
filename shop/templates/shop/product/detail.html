@@ -43,7 +43,8 @@
             </div>
 
             <p class="lead">
-              <span>{{ product.price }} €</span>
+              <span>{{ product.price }} €</span> <br>
+              <span>en stock : <strong> {{ product.quantity }}</strong></span>
             </p>
 
             <p class="lead font-weight-bold">Description:</p>
@@ -53,9 +54,17 @@
             <form action="{% url 'cart:cart_add' product.id %}"
                   class="d-flex justify-content-left" method="post">
               <!-- Default input -->
-                {{ cart_product_form }}
+<!--                {{ cart_product_form }}-->
+
+                <label for="id_quantity">Quantité: </label>
+                <select name="quantity" id="id_quantity">
+                 {% for i in quantity %}
+                   <option value="{{i}}"> {{i}} </option>
+                {% endfor %}
+                 </select><input type="hidden" name="update" value="False" id="id_update">
+
                 {% csrf_token %}
-              <button type="submit" aria-label="Add" class="form-control add-to-cart">
+              <button type="submit" aria-label="Add" value="update" class="form-control add-to-cart">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i> Ajouter au panier
               </button>
 

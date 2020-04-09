@@ -1,7 +1,10 @@
 from datetime import date
+from multiprocessing import context
 
 from django.contrib import messages
+from django.forms import TypedChoiceField, forms, BooleanField
 from django.shortcuts import render, get_object_or_404
+
 from .models import Category, Product
 from cart.form import CartAddProductForm
 from django.core.paginator import Paginator
@@ -40,9 +43,14 @@ def product_detail(request, id, slug):
                                 slug=slug,
                                 available=True)
     cart_product_form = CartAddProductForm()
+    quantity = [(str(i)) for i in range(1, product.quantity+1)]
+
     return render(request,
                   'shop/product/detail.html',
-                  {'product': product, 'cart_product_form': cart_product_form})
+                  {'product': product,
+                   'cart_product_form': cart_product_form,
+                   'quantity': quantity
+                   })
 
 
 def about(request):

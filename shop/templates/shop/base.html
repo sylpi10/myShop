@@ -63,7 +63,7 @@
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="{% url 'cart:cart_detail' %}" title="My Cart">
+            <a class="nav-link waves-effect" href="{% url 'cart:cart_detail' %}" title="Mon pannier">
               <span class="badge red z-depth-1 mr-1">
               {% with total_items=cart|length %}
                 {% if cart|length > 0 %}

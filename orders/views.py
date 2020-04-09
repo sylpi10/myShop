@@ -34,7 +34,7 @@ def order_create(request):
         print(last_name, first_name, address)
 
         if form.is_valid():
-            order = form.save(commit=False)
+            order = form.cleaned_data.save(commit=False)
             order.save()
             for item in cart:
                 OrderItem.objects.create(order=order,
