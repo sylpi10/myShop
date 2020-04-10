@@ -48,10 +48,11 @@
 
 <!--&lt;!&ndash;  <input type="hidden" name="update" value="False" id="id_update">&ndash;&gt;-->
 <!--                        {{ item.update_quantity_form.update }}-->
-                     {{ product.quantity }}
 <!--                        <input type="submit" value="Changer">-->
 <!--                        {% csrf_token %}-->
 <!--                    </form>-->
+                                          {{ item.quantity }}
+
                 </td>
                 <td>
                     <a href="{% url 'cart:cart_remove' product.id %}"> <i class="fa fa-times" aria-hidden="true"></i>
