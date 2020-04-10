@@ -1,6 +1,6 @@
 from datetime import date
 from multiprocessing import context
-
+from django import forms
 from django.contrib import messages
 from django.forms import TypedChoiceField, forms, BooleanField
 from django.shortcuts import render, get_object_or_404
@@ -44,12 +44,17 @@ def product_detail(request, id, slug):
                                 available=True)
     cart_product_form = CartAddProductForm()
     quantity = [(str(i)) for i in range(1, product.quantity+1)]
-
+    # products = request.session['cart']
+    # prod_list = []
+    # for q in quantity:
+    #     prod_list.append((product.id, q),)
+    # cart_product_form = CartAddProductForm(prod_list)
     return render(request,
                   'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form,
-                   'quantity': quantity
+                   'quantity': quantity,
+                   # 'prod_list': prod_list,
                    })
 
 

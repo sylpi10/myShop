@@ -58,12 +58,13 @@
 
                 <label for="id_quantity">Quantité: </label>
                 <select name="quantity" id="id_quantity">
-                 {% for i in quantity %}
-                   <option value="{{i}}"> {{i}} </option>
+                 {% for nb in quantity %}
+                   <option value="{{nb}}"> {{nb}} </option>
                 {% endfor %}
-                 </select><input type="hidden" name="update" value="False" id="id_update">
-
+                 </select>
                 {% csrf_token %}
+              <!--              <input type="hidden" name="update" value="False" id="id_update">-->
+
               <button type="submit" aria-label="Add" value="update" class="form-control add-to-cart">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i> Ajouter au panier
               </button>
