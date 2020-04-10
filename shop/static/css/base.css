@@ -1,6 +1,13 @@
 body{
 
 }
+
+@font-face {
+  font-family: 'Kathen';
+  src: local('Kathen'),
+       url('../../static/font/kathen/Kathen.otf') format("opentype");
+}
+
 .message{
      z-index:999;
      top:120px;
@@ -13,22 +20,30 @@ body{
 
 /* top nav-bar */
 nav{
- background-color: #e4eeee;
+ background-color: #877884;
  font-size: 1.1rem;
- color: #333 !important;
+ color: #fff !important;
 }
 nav>.container>.collapse>ul>li>a{
-    color: #333;
+    color: #fff;
 }
 nav>.container>.collapse>ul>li>a:hover{
-    color: rgb(33, 150, 243);
+    /*color: rgb(33, 150, 243);*/
+    color: #ccc;
 }
 .nav-item>a>i{
     margin-top:10px;
 }
 h1{
-    color: #D8BFD8;
-    font-family: 'Fredericka the Great', cursive;
+    /*color: #dae4b4;*/
+    /*color: #D6BFD1;*/
+    /*color: #966a72;*/
+    /*color: #d79aa5;*/
+    color: #877884;
+    text-shadow: 1px 1px 1px rgba(255,255,255,.8), -1px -1px 1px rgba(255,255,255,.4);
+    /*font-family: 'Fredericka the Great', cursive;*/
+    font-family: 'Kathen';
+     letter-spacing: 10px;
 }
 .fadeIn>h1{
     font-size: 3.6rem;
@@ -62,16 +77,20 @@ main>.main-wrapper{
 /* product list nav*/
 .products-list-wrapper, .pagination-wrapper{
     color: #fff;
-    background-color: #333;
+    background-color: #877884;
+    /*background-color: #333;*/
     padding-top: 10px;
 }
 
 .products-list>ul>li>a{
     text-transform: uppercase;
     margin-top:4px;
+    font-size: .94rem;
+    color: #fff;
 }
 .products-list>ul>li>a:hover{
-    background-color: #444;
+    /*background-color: #444;*/
+    background-color: rgba(255,255,255, .1);
 }
 
 /* PRODUCT LIST CARD*/
@@ -83,13 +102,20 @@ main>.main-wrapper{
     box-shadow: 3px 3px 18px #bbb, -3px -3px 18px #bbb;
     transform: scale(1.04);
 }
+.card-body>.price{
+    color: #887884;
+}
 
 /* product list pagination */
 .pagination>li>a{
     color: #fff !important;
-}.pagination>li>a:hov{
+}
+.pagination>li>a:hov{
     color: #333 !important;
 }
+.pagination>li>.page-link:selected{
+}
+
 
 /* PRODUCT DETAIL*/
 .product-detail>.container>h1{
