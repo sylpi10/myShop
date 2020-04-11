@@ -16,7 +16,7 @@
         <table>
             <thead>
             <tr>
-                <th></th>
+                <th> </th>
                 <th>Produit</th>
                 <th>Quantité</th>
                 <th>Retirer</th>
@@ -31,7 +31,8 @@
                 <th>
                     <a href="{{ product.get_absolute_url }}">
                         <img src="{% if product.image %}{{ product.smart.url }}
-                        {% else %}{% static 'img/no_image.png' %}{% endif %}" width="360" alt="Product image">
+                        {% else %}{% static 'img/no_image.png' %}{% endif %}" width="360" alt="Product image"
+                             title="Retourner sur le détail du produit">
                     </a>
                 </th>
 
@@ -51,7 +52,7 @@
 <!--                        <input type="submit" value="Changer">-->
 <!--                        {% csrf_token %}-->
 <!--                    </form>-->
-                                          {{ item.quantity }}
+                    <span class="quantity"> <strong> {{ item.quantity }} </strong> </span>
 
                 </td>
                 <td>

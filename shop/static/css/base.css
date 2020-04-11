@@ -1,5 +1,5 @@
 body{
-
+   background-color: rgba(0,0,0,0.8);
 }
 
 @font-face {
@@ -8,6 +8,7 @@ body{
        url('../../static/font/kathen/Kathen.otf') format("opentype");
 }
 
+/* TOAST FOR SESSION */
 .message{
      z-index:999;
      top:120px;
@@ -20,47 +21,28 @@ body{
 
 /* top nav-bar */
 nav{
- background-color: #877884;
+ /*background-color: #966a72;*/
+ /*background-color: #DAE4B4;*/
+ background-color: #333;
+ /*background-color: #877884;*/
  font-size: 1.1rem;
- color: #fff !important;
 }
 nav>.container>.collapse>ul>li>a{
-    color: #fff;
+    color: #d6bfd1;
+    /*color: #dae4b4;*/
 }
 nav>.container>.collapse>ul>li>a:hover{
     /*color: rgb(33, 150, 243);*/
-    color: #ccc;
+    /*color: #d6bfd1;*/
+    color: #b9c197;
+}
+nav>.navbar-brand{
+    color: #b9c197 !important;
 }
 .nav-item>a>i{
     margin-top:10px;
 }
-h1{
-    /*color: #dae4b4;*/
-    /*color: #D6BFD1;*/
-    /*color: #966a72;*/
-    /*color: #d79aa5;*/
-    color: #877884;
-    text-shadow: 1px 1px 1px rgba(255,255,255,.8), -1px -1px 1px rgba(255,255,255,.4);
-    /*font-family: 'Fredericka the Great', cursive;*/
-    font-family: 'Kathen';
-     letter-spacing: 10px;
-}
-.fadeIn>h1{
-    font-size: 3.6rem;
-}
-@media screen and (max-width: 520px) {
-    .fadeIn>h1{
-        font-size: 2rem;
-    }
-    .fadeIn>h2{
-        font-size: 1.4rem;
-    }
 
-}
-
-.carousel {
-      height: 60vh !important;
-    }
 
 /* home body */
 main{
@@ -70,28 +52,33 @@ main{
 }
 main>.main-wrapper{
     background-color: rgba(255,255,255,.9);
+    /*background-color: rgba(215,158,154,.85);*/
+    /*background-color: rgba(218, 228, 180, .9);*/
     padding-top:15px;
     margin-top: -2px;
 }
 
 /* product list nav*/
 .products-list-wrapper, .pagination-wrapper{
-    color: #fff;
-    background-color: #877884;
-    /*background-color: #333;*/
+    /*background-color: #877884;*/
+    /*background-color: #966a72;*/
+    background-color: #333;
     padding-top: 10px;
 }
+
 
 .products-list>ul>li>a{
     text-transform: uppercase;
     margin-top:4px;
     font-size: .94rem;
-    color: #fff;
+    color: #dae4b4 !important;
 }
+
 .products-list>ul>li>a:hover{
-    /*background-color: #444;*/
     background-color: rgba(255,255,255, .1);
 }
+
+
 
 /* PRODUCT LIST CARD*/
 
@@ -103,7 +90,9 @@ main>.main-wrapper{
     transform: scale(1.04);
 }
 .card-body>.price{
-    color: #887884;
+    /*color: #887884;*/
+    color: #966a72;
+       /*color: #b9c197;*/
 }
 
 /* product list pagination */
@@ -119,9 +108,11 @@ main>.main-wrapper{
 
 /* PRODUCT DETAIL*/
 .product-detail>.container>h1{
-    color: #333;
+    color: #966a72;
 }
-
+.badge-categ{
+    background-color: #966a72;
+}
 .add-to-cart{
     background-color: #00b200;
     color: #fff;
@@ -137,23 +128,24 @@ main>.main-wrapper{
     padding: 20px;
 }
 .detail-wrapper>h1{
-    color: #333;
+    color: #966a72;
 }
+/* TABLE */
 table{
     width: 100%;
-    font-size: 1.1rem;
 }
 table>thead{
-     background-color: #E6E6FA;
+     background-color: rgba(218, 228, 180, .7);
 }
-
+/* TABLE HEAD */
 table>thead>tr>th{
     padding: 16px;
     text-align:center;
     border-bottom: solid 1px #ccc;
+    font-size: 1.2rem;
 }
 th:nth-child(even){
-   background-color: #E4E2Ff;
+   background-color: rgba(218, 228, 180, .6);
 }
 
 table>thead>tr>th:first-child{
@@ -166,15 +158,24 @@ table>tbody{
 
 /* cells */
 table>tbody>tr{
-    background-color: #E6E6FA;
+    background-color: rgba(218, 228, 180, .7);
     text-align:center;
     border-bottom: solid 1px #ccc;
 }
-
+tbody>tr>th>a>img:hover{
+       transform: scale(1.007);
+       transition: .5s;
+       box-shadow: 4px 4px 8px #666, -4px -4px 8px #666;
+    }
 table>tbody>tr>td:nth-child(even){
-     background-color: #E4E2Ff;
+     background-color: rgba(218, 228, 180, .6);
 }
-
+table>tbody>tr>td{
+    font-size: 1.13rem;
+}
+.quantity{
+    font-size: 1.2rem;
+}
 /* responsive for table*/
 @media screen and (max-width: 940px) {
     .detail-wrapper{
@@ -260,7 +261,7 @@ table>tfoot>tr>td{
     opacity: .84;
 }
 
-/*footer*/
+/* FOOTER */
 footer{
      background: url('../../static/img/chenoa2.jpg') no-repeat center;
      background-size: cover;
@@ -305,7 +306,6 @@ footer{
 
 /* create command */
 .order-info{
-    background-color: #e4eeee;
     margin-top:120px;
     padding: 20px;
     border-bottom: solid 1px #ccc;
@@ -322,7 +322,7 @@ footer{
     color: #333;
 }
 .order-form-wrapper{
-    background-color: #e4eeee;
+    background-color: rgba(218,228,180, .7);
 }
 .order-form{
     padding:40px 28%;
@@ -385,35 +385,52 @@ footer{
 
 /* CREATED -- THANK YOU */
 .thanks-wrapper{
-    margin:0 auto;
+    margin:100px auto;
     width: 74%;
-    background-image: url('../../static/img/background.jpg');
+    background: url('../../static/img/background.jpg') no-repeat;
+    background-size: cover;
 }
 .thanks{
-    padding: 120px 40px;
+    padding: 80px 40px;
     background-color: rgba(0,0,0,.82);
     height: 80vh;
     color: #fff;
     text-align: center;
 }
+.thanks>h1{
+    font-family: 'Roboto';
+    letter-spacing:5px;
+}
+
 .thanks>p{
     font-size: 1.4rem;
     width: 88%;
     margin: 40px auto;
 }
 .thanks>p>span{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 .check{
-    font-size: 4rem;
+    font-size: 2.6rem;
     margin-top: 120px;
-    /*color: #00b200;*/
+    color: #00b200;
+}
+.thanks>.signature{
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+    margin-top: 30px;
+}
+.thanks>.signature>p{
+    font-family: 'Kathen';
+    font-size: 2rem;
+    color: rgb(214, 191, 209);
+    margin-right: 30px;
 }
 
 /* ABOUT */
-
 .about-wrapper{
-   background-color:  #e4eeee;
+   background-color: rgb(218,228,180);
    width: 74%;
    margin: auto;
 }

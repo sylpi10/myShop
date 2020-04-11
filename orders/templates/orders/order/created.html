@@ -8,13 +8,17 @@
 {% block content %}
 <div class="thanks-wrapper">
     <div class="thanks">
-        <h1>Merci de votre achat </h1>
+        <h1>Merci de votre achat <i class="fa fa-check-circle check" aria-hidden="true"></i></h1>
         <p>Votre commande a bien été enregistrée, <br>
             Vos produits vous seront envoyés dans les plus brefs délais. <br><br>
             <span>Le numéro de votre commande est :   <strong>{{ order.id }}</strong></span> <br>
-            <i class="fa fa-check-square check" aria-hidden="true"></i>
         </p>
+        <div class="signature">
+            <p class="signature">L'atelier chenoa </p>
+            <img src="../../static/img/pink-logo.png" width="80" alt="Site Logo">
+        </div>
     </div>
+
 </div>
 {% endblock %}
 

@@ -4494,38 +4494,40 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-text a {
-  color: rgba(0, 0, 0, 0.9);
+  color: #dae4b4;
 }
 
 .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
-  color: rgba(0, 0, 0, 0.9);
+ color: #dae4b4;
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: #dae4b4;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #fff;
+  color: #dae4b4;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: #dae4b4;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+ color: #dae4b4;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
-  color: rgba(255, 255, 255, 0.25);
+  color: #dae4b4;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #fff;
+  color: #dae4b4;
+  font-weight: 400;
+  box-shadow: 0.1px 0.1px 4px rgba(218, 228, 180, .1), -0.1px -0.1px 4px rgba(218, 228, 180, .1);
 }
 
 .navbar-dark .navbar-toggler {
