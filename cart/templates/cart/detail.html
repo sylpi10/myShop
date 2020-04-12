@@ -21,7 +21,7 @@
                 <th>Quantité</th>
                 <th>Retirer</th>
                 <th>Prix Unitaire</th>
-                <th>Prix</th>
+                <th> Prix </th>
             </tr>
             </thead>
             <tbody>
@@ -36,8 +36,8 @@
                     </a>
                 </th>
 
-                <td>{{ product.name }}</td>
-                 <td>
+                <td data-label="Produit">{{ product.name }}</td>
+                 <td data-label="Quantité">
 <!--                    <form action="{% url 'cart:cart_add' product.quantity %}" method="post">-->
 <!--&lt;!&ndash;                        {{ item.update_quantity_form.quantity }}&ndash;&gt;-->
 
@@ -55,12 +55,12 @@
                     <span class="quantity"> <strong> {{ item.quantity }} </strong> </span>
 
                 </td>
-                <td>
+                <td data-label="Retirer">
                     <a href="{% url 'cart:cart_remove' product.id %}"> <i class="fa fa-times" aria-hidden="true"></i>
                     Retirer du Panier</a>
                 </td>
-                <td class="num">{{ item.price }} €</td>
-                <td class="num">{{ item.total_price }} €</td>
+                <td class="num" data-label="Prix Unitaire" >{{ item.price }} €</td>
+                <td class="num" data-label="Prix">{{ item.total_price }} €</td>
             </tr>
             {% endwith %}
             {% endfor %}
