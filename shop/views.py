@@ -17,7 +17,7 @@ def product_list(request, category_slug=None):
     productspag = Product.objects.filter(available=True)
     # request.session.set_expiry(20)
     if request.session.is_empty():
-        messages.success(request, 'Votre session a expirée')
+        messages.success(request, 'Votre session a expiré')
 
     # pagination
     paginator = Paginator(productspag, 8)

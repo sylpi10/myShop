@@ -9,18 +9,22 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>L'Atelier Chenoa</title>
   <!-- Font Awesome -->
-  <link href="{% static 'font/kathen/Kathen.otf' %}" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+
   <!-- Bootstrap core CSS -->
-  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="{% static 'css/mdb.css' %}" rel="stylesheet">
+  <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
   <!-- Your custom styles (optional) -->
 <!--  <link href="{% static 'css/style.min.css' %}" rel="stylesheet">-->
-  <link href="{% static 'css/base.css' %}" rel="stylesheet">
   <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
+  <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
 
 
@@ -42,7 +46,7 @@
       <!-- Collapse -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">&#9776;</span>
+        <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
       </button>
 
       <!-- Links -->
@@ -68,9 +72,9 @@
             <a class="nav-link waves-effect" href="{% url 'cart:cart_detail' %}" title="Mon pannier">
               <span class="badge red z-depth-1 mr-1">
               {% with total_items=cart|length %}
-                {% if cart|length > 0 %}
-                {{ total_items }}
-                {% else %} 0 {% endif %}
+                  {% if cart|length > 0 %}
+                   {{ total_items }}
+                  {% else %} 0 {% endif %}
                 {% endwith %}
               </span>
               <i class="fas fa-shopping-cart"></i>
@@ -78,12 +82,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://www.facebook.com/latelierchenoa" class="nav-link waves-effect" target="_blank">
+            <a href="https://www.facebook.com/latelierchenoa"
+               class="nav-link waves-effect" target="_new" title="Facebook L'atelier Chenoa">
               <i class="fab fa-facebook-f"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="https://www.instagram.com/latelierchenoa/" class="nav-link waves-effect" target="_blank">
+            <a href="https://www.instagram.com/latelierchenoa/"
+               class="nav-link waves-effect" target="_new" title="Instagram L'atelier Chenoa">
               <i class="fab fa-instagram"></i>
             </a>
           </li>
@@ -94,10 +100,11 @@
 
     </div>
   </nav>
-  <!-- Navbar -->
+  <!-- End Navbar -->
+
+<!--  toast session -->
       {% if messages %}
                 {% for message in messages %}
-<!--                    <script> alert(" {{ message }}")</script>-->
   <div aria-live="polite" aria-atomic="true" class="message d-flex justify-content-center align-items-center">
        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
 
@@ -111,6 +118,8 @@
   </div>
                 {% endfor %}
         {% endif %}
+
+
   <!--Carousel Wrapper-->
   <div class="content">
       {% block content %}
@@ -118,6 +127,8 @@
       {% endblock %}
   </div>
   <!--Main layout-->
+
+      <!--  BODY  -->
 
   <!--Footer-->
   <footer class="page-footer text-center wow fadeIn">

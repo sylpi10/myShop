@@ -1,11 +1,17 @@
 body{
    background-color: rgba(0,0,0,0.8);
+   font-family: 'Gotu', 'Montserrat', 'sans-serif';
 }
 
-@font-face {
+/*@font-face {
   font-family: 'Kathen';
   src: local('Kathen'),
        url('../../static/font/kathen/Kathen.otf') format("opentype");
+}*/
+@font-face {
+  font-family: 'Boheme';
+  src: local('Boheme'),
+       url('../../static/font/boheme/Boheme.ttf') format("truetype");
 }
 
 /* TOAST FOR SESSION */
@@ -27,24 +33,22 @@ nav{
  /*background-color: #877884;*/
  font-size: 1.1rem;
 }
-nav>.container>.collapse>ul>li>a{
+nav>.container>.collapse>ul>li>a, .fa-bars{
     color: #d6bfd1;
     /*color: #dae4b4;*/
 }
-nav>.container>.collapse>ul>li>a:hover{
+nav>.container>.collapse>ul>li>a:hover, .fa-bars:hover{
     /*color: rgb(33, 150, 243);*/
     /*color: #d6bfd1;*/
     color: #b9c197;
 }
-nav>.navbar-brand{
-    color: #b9c197 !important;
-}
+
+/* cart + social */
 .nav-item>a>i{
     margin-top:10px;
 }
 
-
-/* home body */
+/* HOME  */
 main{
     margin-top: -15px;
     background: url('../../static/img/chenoaback.jpg') no-repeat;
@@ -52,32 +56,48 @@ main{
 }
 main>.main-wrapper{
     background-color: rgba(255,255,255,.9);
-    /*background-color: rgba(215,158,154,.85);*/
-    /*background-color: rgba(218, 228, 180, .9);*/
     padding-top:15px;
     margin-top: -2px;
 }
 
-/* product list nav*/
+/* PRODUCT CATEG NAV */
 .products-list-wrapper, .pagination-wrapper{
     /*background-color: #877884;*/
     /*background-color: #966a72;*/
     background-color: #333;
     padding-top: 10px;
 }
-
-
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
+  font-weight: 400;
+  box-shadow: 0.1px 0.1px 4px rgba(218, 228, 180, .1),
+   -0.1px -0.1px 4px rgba(218, 228, 180, .1);
+}
+nav>.navbar-brand{
+    color: #b9c197 !important;
+}
+.products-list{
+    display: flex;
+    justify-content: space-around;
+}
+.products-list>ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 .products-list>ul>li>a{
     text-transform: uppercase;
-    margin-top:4px;
     font-size: .94rem;
     color: #dae4b4 !important;
+    width: 100%;
+    margin-top: 7px;
 }
 
 .products-list>ul>li>a:hover{
     background-color: rgba(255,255,255, .1);
 }
-
 
 
 /* PRODUCT LIST CARD*/
@@ -92,7 +112,7 @@ main>.main-wrapper{
 .card-body>.price{
     /*color: #887884;*/
     color: #966a72;
-       /*color: #b9c197;*/
+   /*color: #b9c197;*/
 }
 
 /* product list pagination */
@@ -102,22 +122,46 @@ main>.main-wrapper{
 .pagination>li>a:hov{
     color: #333 !important;
 }
-.pagination>li>.page-link:selected{
-}
 
 
-/* PRODUCT DETAIL*/
-.product-detail>.container>h1{
+/* PRODUCT DETAIL & CART DETAIL H1*/
+.product-detail>.container>h1, .detail-wrapper>h1{
     color: #966a72;
+    font-size: 5rem;
+    font-weight: bold;
 }
+@media screen and (max-width: 1000px) {
+    .product-detail>.container>h1, .detail-wrapper>h1{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .product-detail>.container>h1, .detail-wrapper>h1{
+        font-size: 2.7rem;
+    }
+}
+
+ /* PRODUCT DETAIL */
 .badge-categ{
     background-color: #966a72;
+}
+.form-prod-detail{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
 }
 .add-to-cart{
     background-color: #00b200;
     color: #fff;
     text-transform: uppercase;
-    width: 200px;
+    width:240px;
+    min-width: 240px;
+    margin-top: 4px;
+}
+.add-to-cart:hover{
+    opacity: .8;
 }
 
 /* CART DETAIL*/
@@ -129,6 +173,16 @@ main>.main-wrapper{
 }
 .detail-wrapper>h1{
     color: #966a72;
+}
+@media screen and (max-width: 1000px) {
+    .product-detail>.container>h1{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .product-detail>.container>h1{
+        font-size: 2.7rem;
+    }
 }
 /* TABLE */
 table{
@@ -162,10 +216,12 @@ table>tbody>tr{
     text-align:center;
     border-bottom: solid 1px #ccc;
 }
+tbody>tr>th>a>img{
+     transition: .5s;
+}
 tbody>tr>th>a>img:hover{
        transform: scale(1.007);
-       transition: .5s;
-       box-shadow: 4px 4px 8px #666, -4px -4px 8px #666;
+       box-shadow: 4px 0px 12px #bbb, -4px -4px 12px #bbb;
     }
 table>tbody>tr>td:nth-child(even){
      background-color: rgba(218, 228, 180, .6);
@@ -214,7 +270,7 @@ table>tbody>tr>td{
 }
 @media screen and (max-width: 440px) {
    tbody>tr>th>a>img{
-        width: 300px;
+        width: 240px;
     }
 }
 

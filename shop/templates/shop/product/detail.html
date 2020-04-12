@@ -52,7 +52,7 @@
             <p>{{ product.description|linebreaks }}</p>
 
             <form action="{% url 'cart:cart_add' product.id %}"
-                  class="d-flex justify-content-left" method="post">
+                  class="d-flex justify-content-left form-prod-detail" method="post">
               <!-- Default input -->
 <!--                {{ cart_product_form }}-->
 
