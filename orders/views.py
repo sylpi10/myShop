@@ -1,10 +1,9 @@
 from django.core import mail
 from django.shortcuts import render, redirect
-from django.urls import reverse
-from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 
+from shop.models import Product
 from cart.cart import Cart
 from orders.form import OrderCreateForm
 from orders.models import OrderItem, Order
@@ -31,7 +30,7 @@ def order_create(request):
         postal_code = form.data['postal_code']
         city = form.data['city']
         email = form.data['email']
-        print(last_name, first_name, address)
+
 
         if form.is_valid():
             order = form.save(commit=False)
@@ -53,6 +52,7 @@ def order_create(request):
 
             order.save()
 
+#             // email to atelier chenoa with client infos & command recap
             subject = 'Nouvelle commande'
             html_message = render_to_string('orders/order/send_mail.html',
                                             {'cart': cart, 'item': item,
@@ -66,8 +66,29 @@ def order_create(request):
                                              'order': order
                                              })
             plain_message = strip_tags(html_message)
-            from_email = 'syl.pillet@hotmail.fr'
-            to = 'syl.pillet@hotmail.fr'
+            from_email = 'commande@atelierchenoa.fr'
+#             to = 'syl.pillet@hotmail.fr'
+            to = 'latelierchenoa@gmail.com'
+
+            mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
+
+
+#             email to client with his mail from form to confirm command
+            subject = 'Votre commande chez l\'Atelier Chenoa'
+            html_message = render_to_string('orders/order/mail_to_client.html',
+                                            {'cart': cart, 'item': item,
+                                             'form': form,
+                                             'first_name': first_name,
+                                             'last_name': last_name,
+                                             'address': address,
+                                             'postal_code': postal_code,
+                                             'city': city,
+                                             'email': email,
+                                             'order': order,
+                                             })
+            plain_message = strip_tags(html_message)
+            from_email = 'commande@atelierchenoa.fr'
+            to = email
             # to = 'latelierchenoa@gmail.com'
 
             mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)

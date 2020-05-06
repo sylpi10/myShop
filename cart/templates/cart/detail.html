@@ -13,7 +13,7 @@
     <div class="detail-wrapper">
 
          <h1>Mon Panier</h1>
-        <table>
+        <table class="">
             <thead>
             <tr>
                 <th> </th>
@@ -72,8 +72,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td class="num">Total: {{ cart.get_total_price}} €</td>
+                <td colspan="2" class="num">Total: {{ cart.get_total_price}} €</td>
             </tr>
             </tfoot>
         </table>

@@ -10,42 +10,45 @@
 
       <div class="carousel-item active carousel01">
           <div class="filter">
-             <div class="text-center white-text wow fadeIn">
-                <h1 class=""><strong>L' Atelier Chenoa</strong></h1>
-                <h2>Fabrication artisanale de plein de trucs</h2>
+             <div class="text-center wow fadeIn chenoa">
+                <span class="slider-title"><strong> <span> L'</span>   atelier Chenoa</strong></span>
+                <h1>Fabrication artisanale d' attrapes-rêves, <br> bijoux fantaisie et objets de décoration </h1>
              </div>
           </div>
       </div>
     <div class="carousel-item carousel02">
           <div class="filter">
-             <div class="text-center white-text wow fadeIn">
-             <h1 class="">
-                <strong>L' Atelier Chenoa</strong>
-              </h1>
-              <h2>Fabrication artisanale de plein de trucs</h2>
+             <div class="wow fadeIn deco">
+                <span class="slider-title"> Objets <br> de Décoration</span>
              </div>
           </div>
     </div>
     <div class="carousel-item carousel03">
-          <div class="filter">
-             <div class="text-center white-text wow fadeIn">
-              <h1 class=""><strong>L' Atelier Chenoa</strong></h1>
-              <h2>Fabrication artisanale de plein de trucs</h2>
-          </div>
-    </div>
+          <div class="filter ">
+             <div class="wow wow fadeIn dream">
+              <span class="slider-title">Attrape-Rêves</span>
+             </div>
+        </div>
     </div>
   </div>
 
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"title="Précédent">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" title="Suivant">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
 
+<!-- <div class="main-text filter">-->
+<!--        <div class="col-md-12 text-center white-text wow fadeIn">-->
+<!--                <h1 class=""><strong> <span> L'</span>   atelier Chenoa</strong></h1>-->
+<!--                <h2>Fabrication artisanale d' attrapes-rêves, <br> de bijoux fantaisie et d'objets de décoration</h2>-->
+<!--        </div>-->
+<!--    </div>-->
 
 
   <!--Main layout-->
@@ -71,14 +74,14 @@
           <!-- Links -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item" {% if not category %}class="active"{% endif %}>
-              <a class="nav-link" href="{% url 'shop:product_list' %}">Tous
+              <a class="nav-link" href="{% url 'shop:product_list' %}" title="Tous les Produits" >Tous
 <!--                <span class="sr-only">(current) </span>-->
               </a>
             </li>
               {% for c in categories %}
             <li {% if category.slug == c.slug %}class="selected active" class="nav-item"
                 {% endif %}>
-              <a class="nav-link" href='{{ c.get_absolute_url }}'>{{ c.name }} </a>
+              <a class="nav-link" href='{{ c.get_absolute_url }}' title="Catégorie: {{ c.name }}">{{ c.name }} </a>
             </li>
               {% endfor %}
 
@@ -100,7 +103,7 @@
       <!-- PRODUCT LIST -->
       <section class="text-center mb-4">
         <!--Grid row-->
-        <div class="row wow fadeIn">
+        <div class="row wow ">
           <!--Grid column-->
             {% for product in productspag %}
           <div class="col-lg-3 col-md-6 mb-4">
@@ -113,8 +116,8 @@
                 <img src="{% if product.image %}{{ product.smart.url }}{% else %}
                 {% static 'img/no_image.png' %}
                 {% endif %}" class="card-img-top"
-                  alt="">
-                <a href="{{ product.get_absolute_url }}">
+                  alt="Product image">
+                <a href="{{ product.get_absolute_url }}" title="Détails du Produit">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
@@ -123,12 +126,12 @@
               <!--Card content-->
               <div class="card-body text-center">
                 <!--Category & Title-->
-                <a href="{{ product.get_absolute_url }}"  class="grey-text">
+                <a href="{{ product.get_absolute_url }}"  class="grey-text" title="Détails du Produit" title="Détails du Produit">
                   <h5>{{ product.category }}</h5>
                 </a>
                 <h5>
                   <strong>
-                    <a href="{{ product.get_absolute_url }}" class="dark-grey-text">{{ product.name }}
+                    <a href="{{ product.get_absolute_url }}" class="dark-grey-text"  title="Détails du Produit">{{ product.name }}
 <!--                      <span class="badge badge-pill danger-color">NEW </span>-->
                     </a>
                   </strong>
@@ -161,7 +164,7 @@
           {% if productspag.has_previous %}
           <!--Arrow left-->
           <li class="page-item">
-            <a class="page-link" href="?page={{ productspag.previous_page_number }}" aria-label="Previous">
+            <a class="page-link" href="?page={{ productspag.previous_page_number }}" aria-label="Previous"  title="Page précédente">
               <span aria-hidden="true">&laquo;</span>
               <span class="sr-only">Previous</span>
             </a>
@@ -172,7 +175,8 @@
             {% if productspag.number == num %}
 
           <li class="page-item active">
-            <strong>  <a class="page-link" href="?page={{ num }}"> {{ num }}
+            <strong>  <a class="page-link" href="?page={{ num }}"
+            title="Page {{ num }}" > {{ num }}
               </a>
             </strong>
           </li>
@@ -180,7 +184,8 @@
              {% else %}
 
                 <li class="page-item ">
-                  <a class="page-link" href="?page={{ num }}"> {{ num }} </a>
+                  <a class="page-link" href="?page={{ num }}"
+                  title="Page {{ num }}"> {{ num }} </a>
                 </li>
 
             {% endif %}
@@ -188,7 +193,7 @@
 
             {% if productspag.has_next %}
           <li class="page-item">
-            <a class="page-link" href="?page={{ productspag.next_page_number }}" aria-label="Next">
+            <a class="page-link" href="?page={{ productspag.next_page_number }}" aria-label="Next" title="Page Suivante">
               <span aria-hidden="true">&raquo;</span>
               <span class="sr-only">Next</span>
             </a>

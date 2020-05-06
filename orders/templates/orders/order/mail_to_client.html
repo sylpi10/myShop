@@ -1,0 +1,39 @@
+{% load static %}
+
+{% block content %}
+         <div class="">
+            <h3>Votre commande chez l'Atelier Chenoa</h3>
+             
+             <p>Vous avez récemment fait un commande sur <a href="https://atelierchenoa.fr/">atelierchenoa.fr</a></p>
+
+             <hr>
+
+             <p>Récapitulatif : </p>
+              <span>Votre numéro de commande est <strong>{{ order.id }}</strong></span> <br>
+            <ul>
+                {% for item in cart %}
+                <li>{{ item.quantity }} x {{ item.product.name }} :
+                    <span>{{ item.total_price }} €</span>
+                </li>
+                {% endfor %}
+            </ul>
+            <p id="total">Total : {{ cart.get_total_price }} €</p>
+        </div>
+        <div class="">
+                <h3>A envoyer à: </h3>
+                <ul>
+                    <li>M, Mme:<strong> {{ first_name }} {{ last_name}}</strong></li>
+                    <li>Adresse:<strong> {{ address }}</strong></li>
+                    <li>&nbsp;<strong> {{ postal_code }}</strong></li>
+                    <li>&nbsp;<strong> {{ city }}</strong></li>
+                    <li><strong>Email: {{ email }}</strong></li>
+                </ul>
+        </div>
+<hr><br>
+        <p> Pour toute réclamation vous pouvez nous contacter par mail à l'adresse :
+        latelierchenoa@gmail.com</p>
+
+            <p class="signature">L'atelier chenoa </p>
+
+
+{% endblock %}

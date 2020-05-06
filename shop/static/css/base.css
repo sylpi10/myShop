@@ -1,17 +1,19 @@
 body{
-   background-color: rgba(0,0,0,0.8);
+   background-color: rgba(255,255,255,0.8);
    font-family: 'Gotu', 'Montserrat', 'sans-serif';
 }
-
+h1{
+    font-family: 'Brotherhood_Script', cursive;
+}
 /*@font-face {
   font-family: 'Kathen';
   src: local('Kathen'),
        url('../../static/font/kathen/Kathen.otf') format("opentype");
 }*/
 @font-face {
-  font-family: 'Boheme';
-  src: local('Boheme'),
-       url('../../static/font/boheme/Boheme.ttf') format("truetype");
+  font-family: 'Missy';
+  src: local('Missy_BT_Roman'),
+       url('../../static/font/missy-bt/Missy_BT_Roman.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Brotherhood_Script';
@@ -32,25 +34,41 @@ body{
 
 /* top nav-bar */
 nav{
- /*background-color: #966a72;*/
- /*background-color: #DAE4B4;*/
  background-color: #c6bbad;
- /*background-color: #877884;*/
+ background-color: #b2b1a2;
  font-size: 1.1rem;
+}
+nav>.container>a>.site-title{
+    color: rgb(150, 106, 114);
+    color: #fff;
+    margin-left:-24px;
+    text-transform: capitalize;
+    font-family: 'Missy';
+    font-size: 1.5rem;
 }
 nav>.container>.navbar-brand>img{
     transform: scale(1.4);
+     margin-left:10px;
+}
+nav>.container>.navbar-brand:hover {
+    background-color: rgba(255,255,255,.05);
 }
 nav>.container>.collapse>ul>li>a, .fa-bars{
-    color: #d6bfd1;
-    /*color: #dae4b4;*/
-    color: #333;
+    color: #fff;
 }
 nav>.container>.collapse>ul>li>a:hover, .fa-bars:hover{
-    /*color: rgb(33, 150, 243);*/
-    /*color: #d6bfd1;*/
-    color: #000;
+    color: rgb(150, 106, 114);
 }
+
+@media screen and (max-width: 420px) {
+    nav>.container>a>.site-title{
+        font-size: 1rem;
+    }
+    .site-logo{
+        width:60px;
+    }
+}
+
 
 /* cart + social */
 .nav-item>a>i{
@@ -71,11 +89,9 @@ main>.main-wrapper{
 
 /* PRODUCT CATEG NAV */
 .products-list-wrapper, .pagination-wrapper{
-    /*background-color: #877884;*/
-    /*background-color: #966a72;*/
-    color: #333;
     background-color: #c6bbad;
-    padding-top: 10px;
+    background-color: #b2b1a2;
+    padding-top: 12px;
 }
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .active > .nav-link,
@@ -87,6 +103,7 @@ main>.main-wrapper{
 }
 nav>.navbar-brand{
     color: #333 !important;
+    color: #fff !important;
 }
 .products-list{
     display: flex;
@@ -100,7 +117,7 @@ nav>.navbar-brand{
 .products-list>ul>li>a{
     text-transform: uppercase;
     font-size: .94rem;
-    color: #333 !important;
+    color: #fff !important;
     width: 100%;
     margin-top: 7px;
 }
@@ -150,9 +167,7 @@ nav>.navbar-brand{
     transform: scale(1.04);
 }
 .card-body>.price{
-    /*color: #887884;*/
     color: #966a72;
-   /*color: #b9c197;*/
 }
 
 /* product list pagination */
@@ -167,9 +182,9 @@ nav>.navbar-brand{
 /* PRODUCT DETAIL & CART DETAIL H1*/
 .product-detail>.container>h1, .detail-wrapper>h1{
     color: #966a72;
-    color: #333;
     font-size: 5rem;
-    /*font-weight: bold;*/
+    text-shadow: 1px 0.5px #966a72;
+    font-weight: 400;
 }
 @media screen and (max-width: 1000px) {
     .product-detail>.container>h1, .detail-wrapper>h1{
@@ -183,6 +198,7 @@ nav>.navbar-brand{
 }
 
  /* PRODUCT DETAIL */
+
 .badge-categ{
     background-color: #966a72;
 }
@@ -213,7 +229,7 @@ nav>.navbar-brand{
     padding: 20px;
 }
 .detail-wrapper>h1{
-    color: #333;
+    color: #966a72;
     font-size: 5rem;
 }
 @media screen and (max-width: 1000px) {
@@ -232,19 +248,19 @@ table{
     width: 100%;
 }
 table>thead{
-     /*background-color: rgba(218, 228, 180, .7);*/
-     background-color: #c6bbad;
+     background-color: rgba(198,187,173, .7);
+     background-color: rgba(178,177,162, .8);
 }
 /* TABLE HEAD */
 table>thead>tr>th{
     padding: 16px;
     text-align:center;
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #aaa;
     font-size: 1.2rem;
 }
 th:nth-child(even){
-   /*background-color: rgba(218, 228, 180, .6);*/
-  background-color: #c6bbba;
+    background-color: rgba(198,187,173, .4);
+
 }
 
 table>thead>tr>th:first-child{
@@ -257,10 +273,10 @@ table>tbody{
 
 /* cells */
 table>tbody>tr{
-    /*background-color: rgba(218, 228, 180, .7);*/
-     background-color: #c6bbab;
+   background-color: rgba(198,187,173, .7);
+    background-color: rgba(178,177,162, .8);
     text-align:center;
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #aaa;
 }
 tbody>tr>th>a>img{
      transition: .5s;
@@ -270,8 +286,7 @@ tbody>tr>th>a>img:hover{
        box-shadow: 4px 0px 12px #bbb, -4px -4px 12px #bbb;
     }
 table>tbody>tr>td:nth-child(even){
-     /*background-color: rgba(218, 228, 180, .6);*/
-      background-color: #c6bbba;
+      background-color: rgba(198,187,173, .4);
 }
 table>tbody>tr>td{
     font-size: 1.13rem;
@@ -284,22 +299,13 @@ table>tbody>tr>td{
    .detail-wrapper{
         width: 90%;
     }
-        table>thead{
-        display: none;
+    table>thead{
+    display: none;
     }
-/*    table>tbody>tr{
-        display:flex;
-        width:100%;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        align-items:center;
-    }*/
-  /*  table>tbody>tr>td{
-        margin:10px auto 24px auto;
-    }*/
-        table, table tbody, table tr, table td {
-        display: block;
-        width: 100%;
+
+    table, table tbody, table tr, table td {
+    display: block;
+    width: 100%;
     }
 
    table td{
@@ -360,6 +366,7 @@ table>tfoot>tr>td{
     padding: 16px;
     color: #fff;
     font-weight: bold;
+    text-align: right;
 }
 
 /* links bottom  KEEP SHOPPING  VALIDATE CART*/
@@ -395,7 +402,7 @@ table>tfoot>tr>td{
 
 /* FOOTER */
 footer{
-     background: url('../../static/img/chenoa2.jpg') no-repeat center;
+     background: url('../../static/img/footer_bg.jpg') no-repeat center;
      background-size: cover;
 }
 .footer-wrapper{
@@ -407,9 +414,37 @@ footer{
 .footer-wrapper>.about{
     margin-top: 60px;
     font-size: 1.1rem;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-.footer-wrapper>.social-links{
-    font-size: 1.4rem;
+.footer-wrapper>.about>.footer-descri{
+    width:40%;
+    text-align: left;
+    font-size: 1.2rem;
+}
+.footer-wrapper>.about>.contact{
+        text-align: left;
+        border-left: solid 1px rgba(255,255,255,.4);
+        font-size: 1.4rem;
+}
+.footer-wrapper>.about>.contact>h3{
+    margin-left: 30px;
+}
+.footer-wrapper>.about>.contact>ul{
+    list-style-type: none;
+}
+.footer-wrapper>.about>.contact>ul>li{
+    margin: 12px 0;
+}
+.footer-wrapper>.about>.contact>ul>li>i{
+    margin-right: 12px;
+}
+.footer-wrapper>.about>.contact>ul>li>a:hover, .footer-wrapper>.about>.contact>ul>li>.social-links>a:hover{
+    color: rgb(33, 150, 243);
+}
+.footer-wrapper>.about>.contact>ul>li>.social-links>a{
+    font-size: 1.5rem;
 }
 .footer-wrapper>.social-links>a:hover{
     color: rgb(33, 150, 243);
@@ -428,11 +463,11 @@ footer{
 .footer-copyright>a:hover{
     color: rgb(33, 150, 243);
 }
-@media screen and (max-width: 520px) {
-  .footer-wrapper>.about{
-    font-size: 1.1rem;
-    margin-top: 10px;
-  }
+@media screen and (max-width: 840px) {
+ .footer-wrapper>.about>.footer-descri{
+    width:90%;
+    text-align:center;
+ }
 
 }
 
@@ -440,14 +475,14 @@ footer{
 .order-info{
     margin-top:120px;
     padding: 20px;
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #aaa;
     display:flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 #total{
-    border: solid 1px #333;
+    border: solid 1px #444;
     padding: 6px 14px;
 }
 .order-info>h1{
@@ -456,7 +491,8 @@ footer{
 }
 .order-form-wrapper{
     /*background-color: rgba(218,228,180, .7);*/
-     background-color: rgba(198, 187, 173, .7);
+     /*background-color: rgba(198, 187, 173, .7);*/
+      background-color: rgba(178,177,162, .7);
 }
 .order-form{
     padding:40px 28%;
@@ -562,9 +598,9 @@ footer{
 
 /* ABOUT */
 .about-wrapper{
-   background-color: rgb(218,228,180);
+   background-color: rgba(178,177,162, .7);
    width: 74%;
-   margin: auto;
+   margin:160px auto;
 }
 .about{
     margin: 80px auto;
@@ -573,7 +609,8 @@ footer{
 }
 .about>h1{
         color: #333;
-}
+        font-size: 6rem;
+    }
 .about>p{
      margin: 40px 0;
 }
@@ -588,9 +625,14 @@ footer{
     box-shadow: 2px 2px 14px #ccc, -2px -2px 14px #ccc;
 }
 
+/* legal pages*/
 .legals-wrapper{
     padding:120px 30px 40px 30px;
     width: 85%;
     margin: auto;
     background-color: #e4eeee;
+    font-family: "roboto";
+}
+.title-legal{
+    font-family: "roboto";
 }

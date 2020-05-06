@@ -1,8 +1,4 @@
-from datetime import date
-from multiprocessing import context
-from django import forms
 from django.contrib import messages
-from django.forms import TypedChoiceField, forms, BooleanField
 from django.shortcuts import render, get_object_or_404
 
 from .models import Category, Product
@@ -66,3 +62,4 @@ def legals(request):
 def cgv(request):
     return render(request,
                   'shop/cgv.html')
+
