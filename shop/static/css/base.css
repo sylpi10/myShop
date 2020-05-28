@@ -554,16 +554,16 @@ footer{
 /* CREATED -- THANK YOU */
 .thanks-wrapper{
     margin:100px auto;
-    width: 74%;
-    background: url('../../static/img/background.jpg') no-repeat;
-    background-size: cover;
+    width: 60%;
+
+    /*background: url('../../static/img/background.jpg') no-repeat;*/
+    /*background-size: cover;*/
 }
 .thanks{
     padding: 80px 40px;
-    background-color: rgba(0,0,0,.82);
-    height: 80vh;
-    color: #fff;
-    text-align: center;
+    /*background-color: rgba(0,0,0,.82);*/
+   /* color: #fff;
+    text-align: center;*/
 }
 .thanks>h1{
     font-family: 'Roboto';
@@ -573,14 +573,12 @@ footer{
 .thanks>p{
     font-size: 1.4rem;
     width: 88%;
-    margin: 40px auto;
 }
 .thanks>p>span{
     font-size: 1.3rem;
 }
 .check{
     font-size: 2.6rem;
-    margin-top: 120px;
     color: #00b200;
 }
 .thanks>.signature{
@@ -590,10 +588,10 @@ footer{
     margin-top: 30px;
 }
 .thanks>.signature>p{
-    font-family: 'Kathen';
+    font-family: 'Missy';
     font-size: 2rem;
-    color: rgb(214, 191, 209);
     margin-right: 30px;
+    color:#333;
 }
 
 /* ABOUT */

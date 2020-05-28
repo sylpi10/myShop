@@ -67,8 +67,8 @@ def order_create(request):
                                              })
             plain_message = strip_tags(html_message)
             from_email = 'commande@atelierchenoa.fr'
-#             to = 'syl.pillet@hotmail.fr'
-            to = 'latelierchenoa@gmail.com'
+            to = 'syl.pillet@hotmail.fr'
+#             to = 'latelierchenoa@gmail.com'
 
             mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
 
@@ -88,8 +88,8 @@ def order_create(request):
                                              })
             plain_message = strip_tags(html_message)
             from_email = 'commande@atelierchenoa.fr'
+            #to the address entered in the form
             to = email
-            # to = 'latelierchenoa@gmail.com'
 
             mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
 

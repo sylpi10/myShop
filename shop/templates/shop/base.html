@@ -43,11 +43,8 @@
   <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
   <link href="{% static 'css/base.css' %}" rel="stylesheet">
-
-
-
-
 <!--  </style>-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
@@ -194,7 +191,23 @@
   <!--/.Footer-->
 
   <!-- SCRIPTS -->
-  <!-- JQuery -->
+  <script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#edeff5",
+      "text": "#838391"
+    },
+    "button": {
+      "background": "#4b81e8"
+    }
+  },
+  "content": {
+    "message": "C site utilise des cookies",
+    "dismiss": "ok",
+    "link": "Voir Plus"
+  }
+});
 
  <script type="text/javascript" src="{% static "js/jquery-3.4.1.min.js" %}"></script>
 <!--  <script type="text/javascript" src="{% static "js/popper.min.js" %}"></script>-->
