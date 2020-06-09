@@ -10,7 +10,7 @@ def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
-    productspag = Product.objects.filter(available=True)
+    productspag = Product.objects.filter(available=True).order_by('-updated')
     # request.session.set_expiry(20)
     if request.session.is_empty():
         messages.success(request, 'La session a expiré')
