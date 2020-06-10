@@ -1,9 +1,12 @@
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
-
+from django.core.mail import send_mail
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Category, Product
 from cart.form import CartAddProductForm
 from django.core.paginator import Paginator
+from shop.forms import TestForm
+from django.urls import reverse
 
 
 def product_list(request, category_slug=None):
@@ -12,8 +15,8 @@ def product_list(request, category_slug=None):
     products = Product.objects.filter(available=True)
     productspag = Product.objects.filter(available=True).order_by('-updated')
     # request.session.set_expiry(20)
-    if request.session.is_empty():
-        messages.success(request, 'La session a expiré')
+#     if request.session.is_empty():
+#         messages.success(request, 'La session a expiré')
 
     # pagination
     paginator = Paginator(productspag, 8)
@@ -49,9 +52,37 @@ def product_detail(request, id, slug):
                    })
 
 
+
+# routing
 def about(request):
     return render(request,
                   'shop/about.html')
+
+
+def contact(request):
+     if request.method == 'POST':
+        form = TestForm(request.POST)
+
+        if form.is_valid():
+
+            subject = 'Nouveau Mail de {}  depuis l\'Atelier Chenoa, Objet : {} '.format(form.cleaned_data['name'].capitalize(), form.cleaned_data['subject'], )
+            message = form.cleaned_data['message']
+            from_email = form.cleaned_data['email']
+            print('email', form.cleaned_data['email'])
+            send_mail(subject, message, from_email, ['syl.pillet@hotmail.fr'])
+#             return HttpResponseRedirect(reverse('thanks'))
+            messages.success(request, 'Votre message a bien été envoyé')
+            return HttpResponseRedirect('')
+
+            # clear inputs
+
+            subject = ''
+            from_email = ''
+            message = ''
+
+     else:
+        form = TestForm()
+     return render(request, 'shop/contact.html', {'form': form})
 
 
 def legals(request):

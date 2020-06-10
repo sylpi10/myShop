@@ -76,6 +76,9 @@
           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'shop:about' %}" target="_new" title="A propos de l'Atelier Chenoa" >A propos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'shop:contact' %}" target="_new" title="Contact" >Contact</a>
+          </li>
 
         </ul>
 
@@ -116,21 +119,21 @@
   <!-- End Navbar -->
 
 <!--  toast session -->
-      {% if messages %}
-                {% for message in messages %}
-  <div aria-live="polite" aria-atomic="true" class="message d-flex justify-content-center align-items-center">
-       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+<!--      {% if messages %}-->
+<!--                {% for message in messages %}-->
+<!--  <div aria-live="polite" aria-atomic="true" class="message d-flex justify-content-center align-items-center">-->
+<!--       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">-->
 
-        <div class="toast-body">
-          {{ message }}
-          <button type="button" class="ml-4 mb-1 close" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        </div>
-  </div>
-                {% endfor %}
-        {% endif %}
+<!--        <div class="toast-body">-->
+<!--          {{ message }}-->
+<!--          <button type="button" class="ml-4 mb-1 close" data-dismiss="toast" aria-label="Close">-->
+<!--            <span aria-hidden="true">&times;</span>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        </div>-->
+<!--  </div>-->
+<!--                {% endfor %}-->
+<!--        {% endif %}-->
 
 
   <!--Carousel Wrapper-->

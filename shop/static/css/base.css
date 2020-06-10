@@ -3,7 +3,10 @@ body{
    font-family: 'Gotu', 'Montserrat', 'sans-serif';
 }
 h1{
-    font-family: 'Brotherhood_Script', cursive;
+    /*font-family: 'Brotherhood_Script', cursive;*/
+    font-family: 'Missy', cursive;
+    font-weight: 200;
+    text-transform: capitalize;
 }
 /*@font-face {
   font-family: 'Kathen';
@@ -34,7 +37,7 @@ h1{
 
 /* top nav-bar */
 nav{
- background-color: #c6bbad;
+ /*background-color: #c6bbad;*/
  background-color: #b2b1a2;
  font-size: 1.1rem;
 }
@@ -182,9 +185,9 @@ nav>.navbar-brand{
 /* PRODUCT DETAIL & CART DETAIL H1*/
 .product-detail>.container>h1, .detail-wrapper>h1{
     color: #966a72;
-    font-size: 5rem;
-    text-shadow: 1px 0.5px #966a72;
-    font-weight: 400;
+    font-size: 4rem;
+    /*text-shadow: 1px 0.5px #966a72;*/
+    font-weight: light;
 }
 @media screen and (max-width: 1000px) {
     .product-detail>.container>h1, .detail-wrapper>h1{
@@ -633,4 +636,33 @@ footer{
 }
 .title-legal{
     font-family: "roboto";
+}
+
+.contact-form{
+    padding:60px;
+}
+.contact-form form{
+    width: 74%;
+    margin: auto;
+    padding:auto;
+}
+.contact-form input{
+     width: 70%;
+}
+ .contact-form textarea{
+    width: 100%;
+    margin:auto;
+    padding: 14px;
+ }
+
+ @media screen and (max-width: 750px) {
+    .contact-form{
+        padding:60px 20px;
+    }
+    .contact-form form{
+        width: 100%;
+    }
+    .contact-form input{
+     width: 100%;
+    }
 }

@@ -34,8 +34,6 @@ urlpatterns = [
     path('payment/', include('payment.urls', namespace='payment')),
     path('', include('shop.urls', namespace='shop')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-
-    # path('about', include('shop.urls', namespace='about')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

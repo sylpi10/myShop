@@ -12,7 +12,7 @@
   <main class="mt-5 pt-4">
     <div class="main-wrapper product-detail">
     <div class="container dark-grey-text mt-5">
-            <h1>Détails du produit</h1>
+            <h1>{{ product.name }}</h1>
 
 
       <!--Grid row-->
@@ -47,7 +47,7 @@
 <!--              <span>en stock : <strong> {{ product.quantity }}</strong></span>-->
             </p>
 
-            <p class="lead font-weight-bold">Description:</p>
+<!--            <p class="lead font-weight-bold">Description:</p>-->
 
             <p>{{ product.description|linebreaks }}</p>
 
