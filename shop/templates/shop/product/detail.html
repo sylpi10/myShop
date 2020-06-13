@@ -12,7 +12,7 @@
   <main class="mt-5 pt-4">
     <div class="main-wrapper product-detail">
     <div class="container dark-grey-text mt-5">
-            <h1>{{ product.name }}</h1>
+            <h1 class="page-title">{{ product.name }}</h1>
 
 
       <!--Grid row-->
@@ -30,12 +30,12 @@
         <div class="col-md-6 mb-4">
 
           <!--Content-->
-          <div class="p-4 descri">
+          <div class="p-4">
 
             <div class="mb-3">
-              <a href="">
+             
                 <span class="badge badge-categ p-2 mr-1">{{ product.category }}</span>
-              </a>
+            
 <!--              <a href="">-->
 <!--                <span class="badge blue p-2 mr-1">New</span>-->
 <!--              </a>-->
@@ -44,10 +44,10 @@
 
             <p class="lead">
               <span>{{ product.price }} €</span> <br>
-<!--              <span>en stock : <strong> {{ product.quantity }}</strong></span>-->
+              <!--<span>en stock : <strong> {{ product.quantity }}</strong></span>-->
             </p>
 
-<!--            <p class="lead font-weight-bold">Description:</p>-->
+            <!--<p class="lead font-weight-bold">Description:</p>-->
 
             <p>{{ product.description|linebreaks }}</p>
 

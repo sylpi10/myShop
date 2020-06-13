@@ -12,8 +12,8 @@
     <div class="main-wrapper">
     <div class="detail-wrapper">
 
-         <h1>Mon Panier</h1>
-        <table class="">
+         <h1 class="page-title">Mon Panier</h1>
+        <table>
             <thead>
             <tr>
                 <th> </th>
@@ -36,7 +36,7 @@
                     </a>
                 </th>
 
-                <td data-label="Produit">{{ product.name }}</td>
+                <td data-label="">{{ product.name }}</td>
                  <td data-label="Quantité">
 <!--                    <form action="{% url 'cart:cart_add' product.quantity %}" method="post">-->
 <!--&lt;!&ndash;                        {{ item.update_quantity_form.quantity }}&ndash;&gt;-->
@@ -55,7 +55,7 @@
                     <span class="quantity"> <strong> {{ item.quantity }} </strong> </span>
 
                 </td>
-                <td data-label="Retirer">
+                <td data-label="">
                     <a href="{% url 'cart:cart_remove' product.id %}"> <i class="fa fa-times" aria-hidden="true"></i>
                     Retirer du Panier</a>
                 </td>
@@ -78,14 +78,14 @@
         </table>
         <p class="text-right">
             <a href="{% url 'shop:product_list' %}" class="button light">
-                <i class="fa fa-shopping-basket" aria-hidden="true"></i> Continuer mes Achats </a>
+                <i class="fa fa-shopping-basket" aria-hidden="true" title="Continuer" ></i> Continuer mes Achats </a>
               {% if cart|length > 0 %}
             <a href="{% url 'orders:order_create' %}">
-                  <i class="fa fa-check" aria-hidden="true"></i> Valider mon panier  </a>
+                  <i class="fa fa-check" aria-hidden="true" title="Valider" ></i> Valider mon panier  </a>
                  {% else %}
                 <a href="#" class="empty-cart">
-                    <i class="fa fa-times" aria-hidden="true"></i> Panier vide  </a>
-             {% endif %}
+                    <i class="fa fa-times" aria-hidden="true" title="Votre pannier est vide"></i> Panier vide  </a>
+                 {% endif %}
 
         </p>
     </div>

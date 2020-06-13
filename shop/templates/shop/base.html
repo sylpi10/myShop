@@ -1,26 +1,26 @@
-<!DOCTYPE html>
 {% load static %}
 
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110358642-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-110358642-2');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110358642-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-110358642-2');
+    </script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <meta name="description" content="Fabrication artisanale d' attrapes-rêves, <br> de bijoux fantaisie et d'objets de
-                                      décoration en Lozère (Occitanie, Languedoc-Roussillon)">
-  <meta name="keywords" content="Atelier chenoa, l'atelier chenoa, attrape-rêves, artisanat,
-   fabrication artisanale, décoration, lozère, mende, languedoc-roussillon, occitanie, fabrication artisanale, bijoux">
+   <meta name="description" content="Fabrication artisanale d' attrapes-rêves, de bijoux fantaisie et d'objets de décoration, artisanat en Lozère, Occitanie">
+   
+  <meta name="keywords" content="atelier chenoa, l'atelier chenoa, chenoa, latelier chenoa, attrape-rêve,fabriquant d'attrape reves, attrape-rêves, artisanat, artisanat lozère, fabrication artisanale, décoration, lozère, mende, languedoc-roussillon, occitanie, bijoux, bijoux créoles, paniers, art, maccramé, attrape reves" >
+   
   <title>L'Atelier Chenoa</title>
   <!-- Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
@@ -28,7 +28,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-<!--  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">-->
 
 
   <!-- Bootstrap core CSS -->
@@ -40,8 +39,9 @@
   <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
   <link href="{% static 'css/base.css' %}" rel="stylesheet">
+
 <!--  </style>-->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
@@ -76,7 +76,7 @@
           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'shop:about' %}" target="_new" title="A propos de l'Atelier Chenoa" >A propos</a>
           </li>
-          <li class="nav-item">
+           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'shop:contact' %}" target="_new" title="Contact" >Contact</a>
           </li>
 
@@ -94,7 +94,7 @@
                 {% endwith %}
               </span>
               <i class="fas fa-shopping-cart"></i>
-              <span class="clearfix d-none d-sm-inline-block"> Mon Pannier </span>
+              <span class="clearfix d-none d-sm-inline-block"> Mon Panier </span>
             </a>
           </li>
           <li class="nav-item">
@@ -119,21 +119,21 @@
   <!-- End Navbar -->
 
 <!--  toast session -->
-<!--      {% if messages %}-->
-<!--                {% for message in messages %}-->
-<!--  <div aria-live="polite" aria-atomic="true" class="message d-flex justify-content-center align-items-center">-->
-<!--       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">-->
+  <!--    {% if messages %}-->
+  <!--              {% for message in messages %}-->
+  <!--<div aria-live="polite" aria-atomic="true" class="message d-flex justify-content-center align-items-center">-->
+  <!--     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">-->
 
-<!--        <div class="toast-body">-->
-<!--          {{ message }}-->
-<!--          <button type="button" class="ml-4 mb-1 close" data-dismiss="toast" aria-label="Close">-->
-<!--            <span aria-hidden="true">&times;</span>-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        </div>-->
-<!--  </div>-->
-<!--                {% endfor %}-->
-<!--        {% endif %}-->
+  <!--      <div class="toast-body">-->
+  <!--        {{ message }}-->
+  <!--        <button type="button" class="ml-4 mb-1 close" data-dismiss="toast" aria-label="Close">-->
+  <!--          <span aria-hidden="true">&times;</span>-->
+  <!--        </button>-->
+  <!--      </div>-->
+  <!--      </div>-->
+  <!--</div>-->
+  <!--              {% endfor %}-->
+  <!--      {% endif %}-->
 
 
   <!--Carousel Wrapper-->
@@ -150,16 +150,16 @@
   <footer class="page-footer text-center wow fadeIn">
   <div class="footer-wrapper">
     <div class="about">
-      <p class="footer-descri">L'Atelier Chenoa, créations et réalisations artisanales d'objets de décoration, attrape-reves, paniers, sets de table.
+      <p class="footer-descri">L'Atelier Chenoa, création et réalisation artisanale d'objets de décoration, attrape-rêves, paniers, sets de table.
       Situé en Lozère, Occitanie.
       </p>
       <div class="contact">
-        <h3>Retrouver L'Atelier Chenoa:</h3>
+        <h3>Retrouvez L'Atelier Chenoa:</h3>
         <ul>
           <li><i class="fa fa-map-marker" aria-hidden="true"></i> Mende, Occitanie</li>
           <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:0686088003" title="Téléphone">0686088003</a> </li>
           <li><i class="fa fa-envelope" aria-hidden="true"></i>
-            <a href="mailto:latelierchenoa@gmail.com" title="E-mail">latelierchenoa@gmail.com</a> </li>
+            <a href="mailto:latelierchenoa@gmail.com"title="E-mail">latelierchenoa@gmail.com</a> </li>
           <li>
                 <!-- Social icons -->
             <div class="social-links">
@@ -175,13 +175,10 @@
       </div>
     </div>
 
-
-    <!-- Social icons -->
-
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2020 Copyright:
-      <a href="https://sylvainpillet.com/" target="_new" title="Portfolio">  Syl Pi </a>
+      © 2020 Copyright
+      <!--<a href="https://sylvainpillet.com/" target="_new" title="Portfolio">  Syl Pi </a>-->
       <a href="{% url 'shop:legals' %}" target="_new" title="Mentions légales"> Mentions Légales </a>
       <a href="{% url 'shop:cgv' %}" target="_new" title="Conditions générales de vente"> Condition générales</a>
     </div>
@@ -191,7 +188,10 @@
   <!--/.Footer-->
 
   <!-- SCRIPTS -->
-  <script>
+  <!-- JQuery -->
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
@@ -203,23 +203,29 @@ window.cookieconsent.initialise({
     }
   },
   "content": {
-    "message": "C site utilise des cookies",
-    "dismiss": "ok",
-    "link": "Voir Plus"
+    "message": "Ce site utilise des cookies. ",
+    "dismiss": "Ok",
+    "deny": "Refuser",
+    "link": "Mentions Légales",
+    "href": "https://atelierchenoa.fr/legals"
   }
 });
+</script>
+  <script type='text/javascript' src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
 
- <script type="text/javascript" src="{% static "js/jquery-3.4.1.min.js" %}"></script>
-<!--  <script type="text/javascript" src="{% static "js/popper.min.js" %}"></script>-->
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static "js/popper.min.js" %}"></script>
+  <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
   <script type="text/javascript" src="{% static "js/toast.js" %}"></script>
+  <!-- MDB core JavaScript -->
   <script type="text/javascript" src="{% static "js/mdb.min.js" %}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
 
-<!--  <script type="text/javascript">-->
-<!--    // Animations initialization-->
-<!--    new WOW().init();-->
-
-<!--  </script>-->
+  </script>
 </body>
 
 </html>

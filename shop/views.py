@@ -74,12 +74,6 @@ def contact(request):
             messages.success(request, 'Votre message a bien été envoyé')
             return HttpResponseRedirect('')
 
-            # clear inputs
-
-            subject = ''
-            from_email = ''
-            message = ''
-
      else:
         form = TestForm()
      return render(request, 'shop/contact.html', {'form': form})

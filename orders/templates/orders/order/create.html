@@ -13,10 +13,10 @@
         <div class="main-wrapper">
              <div class="container order-form-wrapper">
                 <div class="order-info">
-                    <h1>Ma commande</h1>
+                    <h1 class="page-title">Ma commande</h1>
                     <ul>
                         {% for item in cart %}
-                        <li>{{ item.quantity }} x {{ item.product.name }} :
+                        <li> <i class="fas fa-location-arrow"></i> {{ item.quantity }} x {{ item.product.name }} :
                             <span>{{ item.total_price }} €</span>
                         </li>
                         {% endfor %}

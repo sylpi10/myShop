@@ -1,16 +1,16 @@
+
 from django.db import models
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill, SmartResize
 
-
 class Category(models.Model):
     name = models.CharField(max_length=200,
                             db_index=True)
     slug = models.SlugField(max_length=200,
                             unique=True)
-
+    
     class Meta:
         ordering = ('name',)
         verbose_name = 'category'
@@ -47,7 +47,3 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('shop:product_detail', args=[self.id, self.slug])
-
-    def __int__(self):
-        return self.quantity
-

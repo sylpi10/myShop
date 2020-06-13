@@ -25,15 +25,15 @@ h1{
 }
 
 /* TOAST FOR SESSION */
-.message{
-     z-index:999;
-     top:120px;
-     right: 40px;
-     position:absolute;
-}
-.message>.toast{
-    border-radius:16px;
-}
+/*.message{*/
+/*     z-index:999;*/
+/*     top:120px;*/
+/*     right: 40px;*/
+/*     position:absolute;*/
+/*}*/
+/*.message>.toast{*/
+/*    border-radius:16px;*/
+/*}*/
 
 /* top nav-bar */
 nav{
@@ -81,7 +81,7 @@ nav>.container>.collapse>ul>li>a:hover, .fa-bars:hover{
 /* HOME  */
 main{
     margin-top: -15px;
-    background: url('../../static/img/chenoaback.jpg') no-repeat;
+    /*background: url('../../static/img/chenoaback.jpg') no-repeat;*/
     background-size: cover;
 }
 main>.main-wrapper{
@@ -181,22 +181,14 @@ nav>.navbar-brand{
     color: #333 !important;
 }
 
-
-/* PRODUCT DETAIL & CART DETAIL H1*/
-.product-detail>.container>h1, .detail-wrapper>h1{
+/*titles for every pages*/
+.page-title{
     color: #966a72;
-    font-size: 4rem;
-    /*text-shadow: 1px 0.5px #966a72;*/
-    font-weight: light;
+    font-size: 3.6rem;
 }
-@media screen and (max-width: 1000px) {
-    .product-detail>.container>h1, .detail-wrapper>h1{
-        font-size: 4rem;
-    }
-}
-@media screen and (max-width: 600px) {
-    .product-detail>.container>h1, .detail-wrapper>h1{
-        font-size: 2.7rem;
+@media screen and (max-width: 500px) {
+   .page-title{
+        font-size: 2rem;
     }
 }
 
@@ -231,27 +223,12 @@ nav>.navbar-brand{
     margin: 140px auto 0 auto;
     padding: 20px;
 }
-.detail-wrapper>h1{
-    color: #966a72;
-    font-size: 5rem;
-}
-@media screen and (max-width: 1000px) {
-    .product-detail>.container>h1{
-        font-size: 4rem;
-    }
-}
-@media screen and (max-width: 600px) {
-    .product-detail>.container>h1{
-        font-size: 2.7rem;
-    }
-}
 
 /* TABLE */
 table{
     width: 100%;
 }
 table>thead{
-     background-color: rgba(198,187,173, .7);
      background-color: rgba(178,177,162, .8);
 }
 /* TABLE HEAD */
@@ -263,7 +240,6 @@ table>thead>tr>th{
 }
 th:nth-child(even){
     background-color: rgba(198,187,173, .4);
-
 }
 
 table>thead>tr>th:first-child{
@@ -271,12 +247,11 @@ table>thead>tr>th:first-child{
 }
 
 table>tbody{
-    padding 10px;
+    padding: 10px;
 }
 
 /* cells */
 table>tbody>tr{
-   background-color: rgba(198,187,173, .7);
     background-color: rgba(178,177,162, .8);
     text-align:center;
     border-bottom: solid 1px #aaa;
@@ -334,11 +309,11 @@ table>tbody>tr>td{
 
     table{
         margin-bottom: 60px;
-        border-size: border-box;
+        /*border-size: border-box;*/
     }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 560px) {
     .detail-wrapper{
         width: 100%;
     }
@@ -355,6 +330,9 @@ table>tbody>tr>td{
     }
    table>tbody>tr>td{
         font-size : .9rem;
+   }
+   .text-right{
+       justify-content: space-around;
    }
 
 }
@@ -484,19 +462,24 @@ footer{
     align-items: center;
     flex-wrap: wrap;
 }
+
+.order-info ul{
+    list-style-type: none;
+}
+
 #total{
-    border: solid 1px #444;
-    padding: 6px 14px;
+    border-radius: 50%;
+    background-color: #966a72;
+    padding: 14px 34px;
+    color: #fff;
+    box-shadow: 3px 3px 4px rgba(33,33,33, .3);
 }
-.order-info>h1{
-    color: #333;
-    font-size: 5rem;
+
+.order-info i{
+    margin-right: 10px;
+    transform: rotate(45deg);
 }
-.order-form-wrapper{
-    /*background-color: rgba(218,228,180, .7);*/
-     /*background-color: rgba(198, 187, 173, .7);*/
-      background-color: rgba(178,177,162, .7);
-}
+
 .order-form{
     padding:40px 28%;
     width: 100%;
@@ -558,15 +541,9 @@ footer{
 .thanks-wrapper{
     margin:100px auto;
     width: 60%;
-
-    /*background: url('../../static/img/background.jpg') no-repeat;*/
-    /*background-size: cover;*/
 }
 .thanks{
     padding: 80px 40px;
-    /*background-color: rgba(0,0,0,.82);*/
-   /* color: #fff;
-    text-align: center;*/
 }
 .thanks>h1{
     font-family: 'Roboto';
@@ -608,10 +585,7 @@ footer{
     width: 80%;
     padding: 40px 0;
 }
-.about>h1{
-        color: #333;
-        font-size: 6rem;
-    }
+
 .about>p{
      margin: 40px 0;
 }
@@ -653,7 +627,12 @@ footer{
     width: 100%;
     margin:auto;
     padding: 14px;
- }
+}
+
+.contact-form form .send-mail{
+    width: 240px;
+}
+
 
  @media screen and (max-width: 750px) {
     .contact-form{
@@ -664,5 +643,9 @@ footer{
     }
     .contact-form input{
      width: 100%;
+    }
+
+    .contact-form form .send-mail{
+        width: 160px;
     }
 }
