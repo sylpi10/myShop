@@ -23,26 +23,26 @@
 
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade slider-detail" data-ride="carousel">
 
-        <!--          thumbnails-->
-                  <ol class="carousel-indicators">
-                    {% for p in photos %}
-                      <img data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"
-                           class="{% if forloop.counter0 == 0 %} active {% endif %} m-2 thumbnails-slider"
-                           src="{{p.smartImg.url}}" alt="First slide" >
-                   {% endfor %}
-                  </ol>
 
         <!--          pictures-->
-                  <div class="carousel-inner">
+                  <div class="carousel-inner carousel-detail-prod">
                     {% for p in photos %}
                     <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
 
-                      <img class="d-block" src="{{p.smartImg.url}}" alt="slide image">
+                      <img class="d-block" src="{{p.smartImg.url}}" alt="slide image" width="540" height="540">
 <!--                      <img class="d-block" src="{{p.image.url}}" alt="image slide">-->
                     </div>
                     {% endfor %}
                   </div>
 
+                       <!--          thumbnails-->
+                  <ol class="carousel-indicators">
+                    {% for p in photos %}
+                      <img data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"
+                           class="{% if forloop.counter0 == 0 %} active {% endif %} mx-2 my-3 thumbnails-slider"
+                           src="{{p.smartImg.url}}" alt="First slide" width="110">
+                   {% endfor %}
+                  </ol>
                 </div>
 
           </div>

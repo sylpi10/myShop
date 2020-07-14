@@ -117,21 +117,21 @@
   <!-- End Navbar -->
 
 <!--  toast session -->
-  <!--    {% if messages %}-->
-  <!--              {% for message in messages %}-->
-  <!--<div aria-live="polite" aria-atomic="true" class="message d-flex justify-content-center align-items-center">-->
-  <!--     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">-->
+<!--      {% if messages %}-->
+<!--                {% for message in messages %}-->
+<!--  <div aria-live="polite" aria-atomic="true" class="message d-flex justify-content-center align-items-center">-->
+<!--       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">-->
 
-  <!--      <div class="toast-body">-->
-  <!--        {{ message }}-->
-  <!--        <button type="button" class="ml-4 mb-1 close" data-dismiss="toast" aria-label="Close">-->
-  <!--          <span aria-hidden="true">&times;</span>-->
-  <!--        </button>-->
-  <!--      </div>-->
-  <!--      </div>-->
-  <!--</div>-->
-  <!--              {% endfor %}-->
-  <!--      {% endif %}-->
+<!--        <div class="toast-body">-->
+<!--          {{ message }}-->
+<!--          <button type="button" class="ml-4 mb-1 close" data-dismiss="toast" aria-label="Close">-->
+<!--            <span aria-hidden="true">&times;</span>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        </div>-->
+<!--  </div>-->
+<!--                {% endfor %}-->
+<!--        {% endif %}-->
 
 
   <!--Carousel Wrapper-->
@@ -212,17 +212,11 @@ window.cookieconsent.initialise({
   <script type='text/javascript' src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
 
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="{% static "js/popper.min.js" %}"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-  <script type="text/javascript" src="{% static "js/toast.js" %}"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="{% static "js/mdb.min.js" %}"></script>
-  <!-- Initializations -->
+  <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
   <script type="text/javascript">
-    // Animations initialization
     new WOW().init();
-
   </script>
 </body>
 

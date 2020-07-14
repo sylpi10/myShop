@@ -15,7 +15,8 @@
     </form>
 
           {% for message in messages %}
-            <p  {% if message.tags %} class=" {{ message.tags }} m-4 text-success bg-white w-50 p-1 text-center my-2 mx-auto" {% endif %}> {{ message }} </p>
+            <p  {% if message.tags %} class=" {{ message.tags }} m-4 text-success bg-white w-50 p-1 text-center my-2 mx-auto"
+                {% endif %}> {{ message }} </p>
          {% endfor %}
  </div>
 

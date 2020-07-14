@@ -74,7 +74,7 @@ def contact(request):
             send_mail(subject, message, from_email, ['syl.pillet@hotmail.fr'])
 #             return HttpResponseRedirect(reverse('thanks'))
             messages.success(request, 'Votre message a bien été envoyé')
-            return HttpResponseRedirect('')
+            return HttpResponseRedirect('contact')
 
      else:
         form = TestForm()
