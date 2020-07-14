@@ -223,6 +223,17 @@ nav>.navbar-brand{
     margin: 140px auto 0 auto;
     padding: 20px;
 }
+.slider-detail{
+    height: 660px;
+    width: 558px;
+}
+.thumbnails-slider{
+    transition: all .6s ease;
+    cursor:pointer;
+}
+.thumbnails-slider:hover{
+    transform:scale(1.06);
+}
 
 /* TABLE */
 table{

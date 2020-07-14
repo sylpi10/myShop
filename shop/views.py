@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Category, Product
+from .models import Category, Product, ProductImage
 from cart.form import CartAddProductForm
 from django.core.paginator import Paginator
 from shop.forms import TestForm
@@ -43,12 +43,14 @@ def product_detail(request, id, slug):
                                 available=True)
     cart_product_form = CartAddProductForm()
     quantity = [(str(i)) for i in range(1, product.quantity+1)]
+    photos = ProductImage.objects.filter(product=product)
 
     return render(request,
                   'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form,
                    'quantity': quantity,
+                   'photos': photos
                    })
 
 

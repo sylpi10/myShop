@@ -18,13 +18,35 @@
       <!--Grid row-->
       <div class="row wow fadeIn">
 
-        <!--Grid column-->
-        <div class="col-md-6 mb-4">
 
-          <img src="{% if product.image %}{{ product.image.url }}{% else %} {% static 'img/no_image.png'%}{% endif %}" class="img-fluid" alt="Product image">
+        <div class="detail-slider">
 
-        </div>
-        <!--Grid column-->
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade slider-detail" data-ride="carousel">
+
+        <!--          thumbnails-->
+                  <ol class="carousel-indicators">
+                    {% for p in photos %}
+                      <img data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"
+                           class="{% if forloop.counter0 == 0 %} active {% endif %} m-2 thumbnails-slider"
+                           src="{{p.smartImg.url}}" alt="First slide" >
+                   {% endfor %}
+                  </ol>
+
+        <!--          pictures-->
+                  <div class="carousel-inner">
+                    {% for p in photos %}
+                    <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
+
+                      <img class="d-block" src="{{p.smartImg.url}}" alt="slide image">
+<!--                      <img class="d-block" src="{{p.image.url}}" alt="image slide">-->
+                    </div>
+                    {% endfor %}
+                  </div>
+
+                </div>
+
+          </div>
+
 
         <!--Grid column-->
         <div class="col-md-6 mb-4">
