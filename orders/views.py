@@ -66,7 +66,8 @@ def order_create(request):
                                              'postal_code': postal_code,
                                              'city': city,
                                              'email': email,
-                                             'order': order
+                                             'order': order,
+                                             'id': id,
                                              })
             plain_message = strip_tags(html_message)
             from_email = 'commande@atelierchenoa.fr'
